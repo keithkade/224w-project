@@ -20,4 +20,5 @@ comments_df = pd.DataFrame([])
 for comment in comments:
     df = pd.DataFrame.from_dict([comment], orient='columns')
     comments_df = comments_df.append(df)
-    
+
+comments_df.to_csv('data/sample_comments.csv', sep='\t', encoding = 'utf-8')
