@@ -1,3 +1,18 @@
+"""
+This file reads a subreddit list and a comment list and creates a bipartite graph based on comments.
+I build standard python classes/lists and panda dataframes for Users, SubReddits, and Comments.
+
+lists:
+comments, subreddits, users
+
+dataframes:
+comments_df, subreddits_df, users_df
+
+I also populate a couple maps, user_to_node_id and subreddit_id_to_node_id, for util purposes
+
+@author: kade
+"""
+
 import pandas as pd
 import snap
 
