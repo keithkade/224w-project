@@ -5,12 +5,15 @@ I also populate a couple maps, user_to_node_id and subreddit_id_to_node_id, for 
 
 @author: kade
 """
+import sys
+sys.path.append('scripts/')
 
 import pandas as pd
 import snap
 from subreddits import subreddits
 from users import users
 from comments import comments
+
 
 ################################################ Globals that get used later
 
@@ -41,12 +44,12 @@ bipartite_graph = snap.TUNGraph.New()
 # Add the nodes
 
 for subreddit in subreddits:
-    bipartite_graph.AddNode(subreddit.Index)
+    bipartite_graph.AddNode(int(subreddit.Index))
     subreddit_id_to_node_id[subreddit.base36_id] = subreddit.Index
 
 # offset by the number of subreddits
 for user in users:
-    bipartite_graph.AddNode(user.Index + subreddit_count)
+    bipartite_graph.AddNode(int(user.Index + subreddit_count))
     user_to_node_id[user.name] = user.Index + subreddit_count
 
 # Add the edges
@@ -54,10 +57,10 @@ for user in users:
 # this is the simplest way to say an author and a user are connected.
 for comment in comments:
     subreddit_node_id = get_node_id_by_subreddit_id(comment.subreddit_id)
-    user_node_id      = get_node_id_by_author(comment.author)
+    user_node_id = get_node_id_by_author(comment.author)
 
     if subreddit_node_id != None and user_node_id != None:
-        bipartite_graph.AddEdge(subreddit_node_id, user_node_id)
+        bipartite_graph.AddEdge(int(subreddit_node_id), int(user_node_id))
 
 # TODO alternative ways to decide if user and subreddit are connected
 

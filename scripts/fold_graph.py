@@ -7,6 +7,9 @@ author: kade
 import snap
 from itertools import combinations
 
+import sys
+sys.path.append('scripts/')
+
 from subreddits import subreddits
 from users import users
 
@@ -38,18 +41,18 @@ def fold_graph():
   # add all the subreddits to the new graph
   for key in node_id_to_info:
     if node_id_to_info[key]['type'] == 'subreddit':
-      folded_graph.AddNode(key)
+      folded_graph.AddNode(int(key))
       nodes_list.append(key)
 
   # connect all subreddits where the same user commented in both
   for user in users:
-      user_node = graph_to_fold.GetNI(info_to_node_id[user.name])
+      user_node = graph_to_fold.GetNI(int(info_to_node_id[user.name]))
       neighbors = []
       for neighbor_id in user_node.GetOutEdges():
           neighbors.append(neighbor_id)
       comb = combinations(neighbors, 2)
       for pair in list(comb):
-          folded_graph.AddEdge(pair[0], pair[1])
+          folded_graph.AddEdge(int(pair[0]), int(pair[1]))
 
   print 'Saving graph'
   FOut = snap.TFOut(folded_grph_str)
@@ -78,4 +81,7 @@ folded_graph = snap.TUNGraph.Load(FIn)
 
 # t5_2cneq - politics subreddit - ~100 comments in the subset
 
-print map(lambda info: info[1]['name'], get_jaccard(folded_graph, info_to_node_id['t5_2cneq']))
+print map(lambda info: info[1]['name'], get_jaccard(folded_graph, int(info_to_node_id['t5_2cneq'])))
+
+# Save edgelist, because it's easier to read it in in networkx
+snap.SaveEdgeList(folded_graph, 'graphs/bipartite_connected_by_comment_folded_edgelist.txt')
