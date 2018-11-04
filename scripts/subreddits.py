@@ -1,3 +1,10 @@
+"""
+Module for sharing data.
+I build standard python classes/lists and panda dataframes that can be imported
+
+@author: kade
+"""
+
 import pandas as pd
 
 subreddits_file = 'data/subreddits_basic.csv'
