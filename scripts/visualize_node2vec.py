@@ -5,7 +5,6 @@ Created on Sat Nov 03 15:04:48 2018
 @author: dimit_000
 """
 
-os.chdir("G:\\Docs\\Stanford - Mining Massive Datasets\\CS224w\\Project")
 # -*- coding: utf-8 -*-
 """
 Created on Sat Nov 03 15:48:36 2018
@@ -20,6 +19,7 @@ import numpy as np
 import networkx as nx
 from node2vec import *
 from gensim.models import Word2Vec
+from sklearn.manifold import TSNE
 
 weighted = False
 directed = False
@@ -77,13 +77,6 @@ print(model['9076'])
 # Look up top 5 most similar nodes to '9076'
 node_id = ['9076']
 model.wv.most_similar(positive = node_id, topn = 5)
-# [('34', 0.9948307871818542),
-#  ('16', 0.9929938316345215),
-#  ('31', 0.9839209318161011),
-#  ('23', 0.9677373766899109),
-#  ('24', 0.9609790444374084)]
-
-
 
 # fit a 2d PCA model to the vectors
 X = model[model.wv.vocab]
@@ -96,3 +89,8 @@ plt.ylim([-1.6, 1.8])
 # for i, node_id in enumerate(nodes):
 # 	plt.annotate(node_id, xy=(result[i, 0], result[i, 1]))
 plt.show()
+
+# Try TSNE instead of PCA
+tsne = TSNE(n_components=2, init='pca', random_state=0)
+Y = tsne.fit_transform(X)
+plt.scatter(Y[:, 0], Y[:, 1], cmap=plt.cm.Spectral)
