@@ -10,10 +10,11 @@ sys.path.append('scripts/')
 
 import pandas as pd
 import snap
-from subreddits import subreddits
+from subreddits import get_filtered_subreddits
 from users import users
 from comments import comments
 
+subreddits = get_filtered_subreddits(10000)
 
 ################################################ Globals that get used later
 

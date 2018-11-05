@@ -10,8 +10,10 @@ from itertools import combinations
 import sys
 sys.path.append('scripts/')
 
-from subreddits import subreddits
+from subreddits import get_filtered_subreddits
 from users import users
+
+subreddits = get_filtered_subreddits(10000)
 
 graph_to_fold = 'graphs/bipartite_connected_by_comment.graph'
 folded_grph_str = 'graphs/bipartite_connected_by_comment_folded.graph'
@@ -69,19 +71,23 @@ def get_jaccard(g, node_id):
     for n in node.GetOutEdges():
       union.add(n)
 
+    if len(union) == 0:
+      similar.append((0, node_id_to_info[node.GetId()]))
+      continue
+
     Nbrs = snap.TIntV()
     snap.GetCmnNbrs(g, node_id, node.GetId(), Nbrs)
     similar.append((float(Nbrs.Len()) / float(len(union)), node_id_to_info[node.GetId()]))
 
   return sorted(similar, reverse = True)[0:6]
 
-# fold_graph()
+fold_graph()
 FIn = snap.TFIn(folded_grph_str)
 folded_graph = snap.TUNGraph.Load(FIn)
 
 # t5_2cneq - politics subreddit - ~100 comments in the subset
 
-print map(lambda info: info[1]['name'], get_jaccard(folded_graph, int(info_to_node_id['t5_2cneq'])))
+# print map(lambda info: info[1]['name'], get_jaccard(folded_graph, int(info_to_node_id['t5_2cneq'])))
 
 # Save edgelist, because it's easier to read it in in networkx
 snap.SaveEdgeList(folded_graph, 'graphs/bipartite_connected_by_comment_folded_edgelist.txt')
