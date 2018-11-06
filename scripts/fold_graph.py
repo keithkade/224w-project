@@ -85,6 +85,9 @@ fold_graph()
 FIn = snap.TFIn(folded_grph_str)
 folded_graph = snap.TUNGraph.Load(FIn)
 
+print 'Folded Graph Nodes: ' + str(folded_graph.GetNodes())
+print 'Folded Graph Edges: ' + str(folded_graph.GetEdges())
+
 # t5_2cneq - politics subreddit - ~100 comments in the subset
 
 # print map(lambda info: info[1]['name'], get_jaccard(folded_graph, int(info_to_node_id['t5_2cneq'])))

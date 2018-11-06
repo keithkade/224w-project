@@ -20,6 +20,7 @@ subreddits = get_filtered_subreddits(10000)
 
 subreddit_id_to_node_id = {}
 user_to_node_id = {}
+node_id_to_name = {}
 
 ################################################ Utility functions
 
@@ -47,21 +48,52 @@ bipartite_graph = snap.TUNGraph.New()
 for subreddit in subreddits:
     bipartite_graph.AddNode(int(subreddit.Index))
     subreddit_id_to_node_id[subreddit.base36_id] = subreddit.Index
+    node_id_to_name[subreddit.Index] = subreddit.name
 
 # offset by the number of subreddits
 for user in users:
     bipartite_graph.AddNode(int(user.Index + subreddit_count))
     user_to_node_id[user.name] = user.Index + subreddit_count
+    node_id_to_name[user.Index + subreddit_count] = user.name
 
 # Add the edges
 
-# this is the simplest way to say an author and a user are connected.
-for comment in comments:
-    subreddit_node_id = get_node_id_by_subreddit_id(comment.subreddit_id)
-    user_node_id = get_node_id_by_author(comment.author)
+# connect if a user has commented in a subreddit at least n times
+def connect_via_n_comment(n):
 
-    if subreddit_node_id != None and user_node_id != None:
-        bipartite_graph.AddEdge(int(subreddit_node_id), int(user_node_id))
+    user_comment_counts = {}
+    for user in users:
+        user_comment_counts[user.name] = 0
+
+    comment_counts = {}
+
+    for comment in comments:
+        user_comment_counts[comment.author] += 1
+
+
+    for comment in comments:
+        # ignore super active accounts. #TODO figure out better solution
+        if user_comment_counts[comment.author] > 100:
+            continue
+
+        subreddit_node_id = get_node_id_by_subreddit_id(comment.subreddit_id)
+        user_node_id = get_node_id_by_author(comment.author)
+
+        user_comment_counts[comment.author] += 1
+
+        if subreddit_node_id != None and user_node_id != None:
+            if (int(subreddit_node_id), int(user_node_id)) in comment_counts:
+                comment_counts[(int(subreddit_node_id), int(user_node_id))] += 1
+            else:
+                comment_counts[(int(subreddit_node_id), int(user_node_id))] = 1
+
+    for subreddit_node_id, user_node_id in comment_counts:
+        if comment_counts[(int(subreddit_node_id), int(user_node_id))] >= n:
+            bipartite_graph.AddEdge(int(subreddit_node_id), int(user_node_id))
+
+connect_via_n_comment(1) # 6661
+# connect_via_n_comment(2) # 760 edges
+# connect_via_n_comment(3) # 166 edges
 
 # TODO alternative ways to decide if user and subreddit are connected
 

@@ -12,12 +12,21 @@ from pprint import pprint
 
 comments_file = 'data/sample_comments.json'
 
+invalid_names = set(['[deleted]', 'ithinkisaidtoomuch', 'Concise_AMA_Bot'])
+
+# ithinkisaidtoomuch appears to be a bot
+
 comments = []
 for line in open(comments_file, 'r'):
-    comments.append(json.loads(line))
+    comment = json.loads(line)
+    comment['body'] = '' # this was causing the csv to come out weird
+    if comment['author'] in invalid_names: # skip problem comments
+        continue
+    comments.append(comment)
 
 comments_df = pd.DataFrame([])
 for comment in comments:
+
     df = pd.DataFrame.from_dict([comment], orient='columns')
     comments_df = comments_df.append(df)
 
