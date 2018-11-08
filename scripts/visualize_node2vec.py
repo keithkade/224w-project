@@ -22,6 +22,9 @@ from gensim.models import Word2Vec
 from sklearn.manifold import TSNE
 from sklearn.cluster import KMeans
 from matplotlib import colors
+from subreddits import get_filtered_subreddits
+import snap
+
 
 import sys
 sys.path.append('scripts/')
@@ -35,6 +38,14 @@ window_size = 10
 workers = 8
 no_iter = 1
 graph_input = "graphs/bipartite_connected_by_comment_folded_edgelist.txt"
+
+
+# Keep the node id to name map
+subreddits = get_filtered_subreddits(10000)
+node_id_to_info = {}
+for subreddit in subreddits:
+    node_id_to_info[subreddit.Index] = { 'type': 'subreddit', 'id': subreddit.base36_id, 'name': subreddit.name }
+    
 
 def read_graph():
 	'''
@@ -105,28 +116,36 @@ plt.xlim([pca_Y[:, 0].min()-0.1, pca_Y[:, 0].max()+0.1])
 plt.ylim([pca_Y[:, 1].min()-0.1, pca_Y[:, 1].max()+0.1])
 plt.show()
 
+# Change figure size
+fig_size = plt.rcParams["figure.figsize"]
+print "Current size:", fig_size
+fig_size[0] = 40
+fig_size[1] = 40
+plt.rcParams["figure.figsize"] = fig_size
+print "Current size:", fig_size
+
+# Plot clustered nodes on the projected PCA data
 for i in range(pca_Y.shape[0]):
     x = pca_Y[i][0]
     y = pca_Y[i][1]
-    plt.plot(x, y, marker = "o", c=color[label[i]])
-    plt.text(x * (1 + 0.01), y * (1 + 0.01) , x_labels[i], fontsize=8)
+    plt.plot(x, y, marker = "o", c=color[label[i]], markersize = 20)
+    plt.text(x * (1 + 0.01), y * (1 + 0.01) , x_labels[i], fontsize=20)
 plt.xlim([pca_Y[:, 0].min()-0.1, pca_Y[:, 0].max()+0.1])
 plt.ylim([pca_Y[:, 1].min()-0.1, pca_Y[:, 1].max()+0.1])
+plt.savefig("/plots/pca_plot.png")
 # plt.savefig("pca_plot.png")
 plt.show()
 
-# Get current size
-fig_size = plt.rcParams["figure.figsize"]
- 
-# Prints: [8.0, 6.0]
-print "Current size:", fig_size
- 
-# Set figure width to 12 and height to 9
-fig_size[0] = 20
-fig_size[1] = 20
-plt.rcParams["figure.figsize"] = fig_size
 
 # Try TSNE instead of PCA
 tsne = TSNE(n_components=2, init='pca', random_state=0)
-Y = tsne.fit_transform(X)
-plt.scatter(Y[:, 0], Y[:, 1], c=label, cmap= colors.ListedColormap(color))
+tsne_Y = tsne.fit_transform(X)
+for i in range(tsne_Y.shape[0]):
+    x = tsne_Y[i][0]
+    y = tsne_Y[i][1]
+    plt.plot(x, y, marker = "o", c=color[label[i]], markersize = 20)
+    plt.text(x * (1 + 0.01), y * (1 + 0.01) , x_labels[i], fontsize=20)
+plt.xlim([tsne_Y[:, 0].min()-0.1, tsne_Y[:, 0].max()+0.1])
+plt.ylim([tsne_Y[:, 1].min()-0.1, tsne_Y[:, 1].max()+0.1])
+plt.savefig("/plots/tsne_plot.png")
+plt.show()
