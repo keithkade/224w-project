@@ -20,6 +20,11 @@ import networkx as nx
 from node2vec import *
 from gensim.models import Word2Vec
 from sklearn.manifold import TSNE
+from sklearn.cluster import KMeans
+from matplotlib import colors
+
+import sys
+sys.path.append('scripts/')
 
 weighted = False
 directed = False
@@ -78,19 +83,50 @@ print(model['9076'])
 node_id = ['9076']
 model.wv.most_similar(positive = node_id, topn = 5)
 
-# fit a 2d PCA model to the vectors
+# Fit a kmeans model to the embedded vectors
 X = model[model.wv.vocab]
+
+X = np.empty([nx_G.number_of_nodes(), dimensions])
+x_labels = []
+for i, node_id in enumerate(model.wv.vocab.keys()):
+    X[i,:] = model[node_id]
+    x_labels.append(str(node_id_to_info[node_id]['name']))
+    
+kmeans = KMeans(n_clusters=2, random_state=0).fit(X)
+label = kmeans.labels_
+
+# fit a 2d PCA model to the vectors
 pca = PCA(n_components=2)
-result = pca.fit_transform(X)
+pca_Y = pca.fit_transform(X)
 # create a scatter plot of the projection
-plt.scatter(result[:, 0], result[:, 1])
-plt.xlim([-1.6, 3.5])
-plt.ylim([-1.6, 1.8])
-# for i, node_id in enumerate(nodes):
-# 	plt.annotate(node_id, xy=(result[i, 0], result[i, 1]))
+color = ['red','blue']
+plt.scatter(pca_Y[:, 0], pca_Y[:, 1], c=label, cmap= colors.ListedColormap(color))
+plt.xlim([pca_Y[:, 0].min()-0.1, pca_Y[:, 0].max()+0.1])
+plt.ylim([pca_Y[:, 1].min()-0.1, pca_Y[:, 1].max()+0.1])
 plt.show()
+
+for i in range(pca_Y.shape[0]):
+    x = pca_Y[i][0]
+    y = pca_Y[i][1]
+    plt.plot(x, y, marker = "o", c=color[label[i]])
+    plt.text(x * (1 + 0.01), y * (1 + 0.01) , x_labels[i], fontsize=8)
+plt.xlim([pca_Y[:, 0].min()-0.1, pca_Y[:, 0].max()+0.1])
+plt.ylim([pca_Y[:, 1].min()-0.1, pca_Y[:, 1].max()+0.1])
+# plt.savefig("pca_plot.png")
+plt.show()
+
+# Get current size
+fig_size = plt.rcParams["figure.figsize"]
+ 
+# Prints: [8.0, 6.0]
+print "Current size:", fig_size
+ 
+# Set figure width to 12 and height to 9
+fig_size[0] = 20
+fig_size[1] = 20
+plt.rcParams["figure.figsize"] = fig_size
 
 # Try TSNE instead of PCA
 tsne = TSNE(n_components=2, init='pca', random_state=0)
 Y = tsne.fit_transform(X)
-plt.scatter(Y[:, 0], Y[:, 1], cmap=plt.cm.Spectral)
+plt.scatter(Y[:, 0], Y[:, 1], c=label, cmap= colors.ListedColormap(color))
