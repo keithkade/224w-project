@@ -7,7 +7,7 @@ I build standard python classes/lists and panda dataframes that can be imported
 
 import pandas as pd
 
-users_file = 'data/sample_users.csv'
+users_file = 'data/2017_users.csv'
 
 class User:
     attribs = ['Index', 'name']

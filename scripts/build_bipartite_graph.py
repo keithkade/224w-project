@@ -70,7 +70,6 @@ def connect_via_n_comment(n):
     for comment in comments:
         user_comment_counts[comment.author] += 1
 
-
     for comment in comments:
         # ignore super active accounts. #TODO figure out better solution
         if user_comment_counts[comment.author] > 100:
@@ -91,8 +90,8 @@ def connect_via_n_comment(n):
         if comment_counts[(int(subreddit_node_id), int(user_node_id))] >= n:
             bipartite_graph.AddEdge(int(subreddit_node_id), int(user_node_id))
 
-connect_via_n_comment(1) # 6661
-# connect_via_n_comment(2) # 760 edges
+connect_via_n_comment(1) # 6661, 14157
+# connect_via_n_comment(2) # 760
 # connect_via_n_comment(3) # 166 edges
 
 # TODO alternative ways to decide if user and subreddit are connected
