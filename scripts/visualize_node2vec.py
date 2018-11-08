@@ -17,6 +17,8 @@ import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 import numpy as np
 import networkx as nx
+import sys
+sys.path.append('scripts/')
 from node2vec import *
 from gensim.models import Word2Vec
 from sklearn.manifold import TSNE
@@ -26,8 +28,6 @@ from subreddits import get_filtered_subreddits
 import snap
 
 
-import sys
-sys.path.append('scripts/')
 
 weighted = False
 directed = False
@@ -44,7 +44,7 @@ graph_input = "graphs/bipartite_connected_by_comment_folded_edgelist.txt"
 subreddits = get_filtered_subreddits(10000)
 node_id_to_info = {}
 for subreddit in subreddits:
-    node_id_to_info[subreddit.Index] = { 'type': 'subreddit', 'id': subreddit.base36_id, 'name': subreddit.name }
+    node_id_to_info[subreddit.Index] = {'type': 'subreddit', 'id': subreddit.base36_id, 'name': subreddit.name }
     
 
 def read_graph():
@@ -76,7 +76,9 @@ def learn_embeddings(walks):
 # For now, node2vec will actually be equivelant to the deepwalk model 
 p, q = 1, 1
 nx_G = read_graph()
-G = Graph(nx_G, directed, p, q)
+# Keep only the largest connected component to run the node2vec model
+Gc = max(nx.connected_component_subgraphs(nx_G), key=len)
+G = Graph(Gc, directed, p, q)
 G.preprocess_transition_probs()
 walks = G.simulate_walks(num_walks, walk_length)
 model = learn_embeddings(walks)
@@ -95,13 +97,12 @@ node_id = ['9076']
 model.wv.most_similar(positive = node_id, topn = 5)
 
 # Fit a kmeans model to the embedded vectors
-X = model[model.wv.vocab]
-
-X = np.empty([nx_G.number_of_nodes(), dimensions])
+# X = model[model.wv.vocab]
+X = np.empty([Gc.number_of_nodes(), dimensions])
 x_labels = []
 for i, node_id in enumerate(model.wv.vocab.keys()):
     X[i,:] = model[node_id]
-    x_labels.append(str(node_id_to_info[node_id]['name']))
+    x_labels.append(str(node_id_to_info[int(node_id)]['name']))
     
 kmeans = KMeans(n_clusters=2, random_state=0).fit(X)
 label = kmeans.labels_
@@ -111,11 +112,6 @@ pca = PCA(n_components=2)
 pca_Y = pca.fit_transform(X)
 # create a scatter plot of the projection
 color = ['red','blue']
-plt.scatter(pca_Y[:, 0], pca_Y[:, 1], c=label, cmap= colors.ListedColormap(color))
-plt.xlim([pca_Y[:, 0].min()-0.1, pca_Y[:, 0].max()+0.1])
-plt.ylim([pca_Y[:, 1].min()-0.1, pca_Y[:, 1].max()+0.1])
-plt.show()
-
 # Change figure size
 fig_size = plt.rcParams["figure.figsize"]
 print "Current size:", fig_size
@@ -133,7 +129,6 @@ for i in range(pca_Y.shape[0]):
 plt.xlim([pca_Y[:, 0].min()-0.1, pca_Y[:, 0].max()+0.1])
 plt.ylim([pca_Y[:, 1].min()-0.1, pca_Y[:, 1].max()+0.1])
 plt.savefig("/plots/pca_plot.png")
-# plt.savefig("pca_plot.png")
 plt.show()
 
 
@@ -147,5 +142,5 @@ for i in range(tsne_Y.shape[0]):
     plt.text(x * (1 + 0.01), y * (1 + 0.01) , x_labels[i], fontsize=20)
 plt.xlim([tsne_Y[:, 0].min()-0.1, tsne_Y[:, 0].max()+0.1])
 plt.ylim([tsne_Y[:, 1].min()-0.1, tsne_Y[:, 1].max()+0.1])
-plt.savefig("/plots/tsne_plot.png")
+# plt.savefig("/plots/tsne_plot.png")
 plt.show()
