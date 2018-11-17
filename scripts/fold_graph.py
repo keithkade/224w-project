@@ -12,8 +12,9 @@ sys.path.append('scripts/')
 
 from subreddits import get_filtered_subreddits
 from users import users
+from settings import subreddit_subscriber_cutoff
 
-subreddits = get_filtered_subreddits(10000)
+subreddits = get_filtered_subreddits(subreddit_subscriber_cutoff)
 
 graph_to_fold = 'graphs/bipartite_connected_by_comment.graph'
 folded_grph_str = 'graphs/bipartite_connected_by_comment_folded.graph'

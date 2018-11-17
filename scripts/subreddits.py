@@ -6,8 +6,7 @@ I build standard python classes/lists and panda dataframes that can be imported
 """
 
 import pandas as pd
-
-subreddits_file = 'data/subreddits_basic.csv'
+from settings import subreddits_csv
 
 class SubReddit:
     # attribs = ['Index', 'base10_id', 'base36_id', 'creation_epoch', 'name', 'subscriber_count']
@@ -21,7 +20,7 @@ class SubReddit:
         return 'Subreddit name: ' + self.name + ', id: ' + str(self.base36_id) + ' Index: ' + str(self.Index)
 
 subreddits = []
-subreddits_df = pd.read_csv(subreddits_file, encoding='utf-8')
+subreddits_df = pd.read_csv(subreddits_csv, encoding='utf-8')
 for row in subreddits_df.itertuples():
     subreddit = SubReddit(row)
     subreddits.append(subreddit)

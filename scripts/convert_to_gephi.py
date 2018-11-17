@@ -11,10 +11,11 @@ import csv
 import os
 
 from subreddits import get_filtered_subreddits
+from settings import subreddit_subscriber_cutoff
 
 node_id_to_info = {}
 
-subreddits = get_filtered_subreddits(10000)
+subreddits = get_filtered_subreddits(subreddit_subscriber_cutoff)
 
 subreddit_count = len(subreddits)
 

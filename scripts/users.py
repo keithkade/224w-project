@@ -6,8 +6,7 @@ I build standard python classes/lists and panda dataframes that can be imported
 """
 
 import pandas as pd
-
-users_file = 'data/2017_users.csv'
+from settings import users_csv
 
 class User:
     attribs = ['Index', 'name']
@@ -20,7 +19,7 @@ class User:
         return 'Name: ' + self.name
 
 users = []
-users_df = pd.read_csv(users_file, encoding='utf-8')
+users_df = pd.read_csv(users_csv, encoding='utf-8')
 for row in users_df.itertuples():
     user = User(row)
     users.append(user)

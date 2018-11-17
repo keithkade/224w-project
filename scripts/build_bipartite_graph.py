@@ -10,11 +10,12 @@ sys.path.append('scripts/')
 
 import pandas as pd
 import snap
+from settings import subreddit_subscriber_cutoff
 from subreddits import get_filtered_subreddits
 from users import users
 from comments import comments
 
-subreddits = get_filtered_subreddits(10000)
+subreddits = get_filtered_subreddits(subreddit_subscriber_cutoff)
 
 ################################################ Globals that get used later
 
@@ -44,6 +45,8 @@ user_count      = len(users)
 bipartite_graph = snap.TUNGraph.New()
 
 # Add the nodes
+
+print 'Adding nodes'
 
 for subreddit in subreddits:
     bipartite_graph.AddNode(int(subreddit.Index))
@@ -90,9 +93,10 @@ def connect_via_n_comment(n):
         if comment_counts[(int(subreddit_node_id), int(user_node_id))] >= n:
             bipartite_graph.AddEdge(int(subreddit_node_id), int(user_node_id))
 
-connect_via_n_comment(1) # 6661, 14157
-# connect_via_n_comment(2) # 760
-# connect_via_n_comment(3) # 166 edges
+print 'Adding edges'
+# connect_via_n_comment(1)
+connect_via_n_comment(2)
+# connect_via_n_comment(3)
 
 # TODO alternative ways to decide if user and subreddit are connected
 
