@@ -22,10 +22,13 @@ comments_file = '/Volumes/TIME/reddit data/RC_2017-05.txt'
 
 invalid_names = set(['[deleted]', 'ithinkisaidtoomuch', 'Concise_AMA_Bot', 'AutoModerator'])
 valid_subs = set(map(lambda x: x.name, subreddits))
-# mostly the defaults
+# mostly the defaults. also some with weirdly high comment count, and non-political ones
 blacklist = set(['AskReddit', 'funny', 'pics', 'gaming', 'videos', 'movies',
 'mildlyinteresting', 'OldSchoolCool', 'todayilearned', 'AdviceAnimals', 'gifs',
-'aww', 'blog', 'books', 'food', 'askscience', 'Showerthoughts', 'photoshopbattles'])
+'aww', 'blog', 'books', 'food', 'askscience', 'Showerthoughts', 'photoshopbattles',
+'photoshopbattles', 'gonewild', 'forhonor', 'RocketLeagueExchange', 'RocketLeague',
+'Sneakers', 'GamingCircleJerk', 'counting', 'darksouls3', 'Warhammer40k',
+'EliteDangerous', 'DnD', 'hearthstone', 'Drugs', 'Bitcoin', 'Anime', 'Ice_Poseidon'])
 
 comments = []
 comment_count = 0
