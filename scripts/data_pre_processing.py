@@ -54,7 +54,7 @@ for line in open(comments_file, 'r'):
     comment_count += 1
     print comment_count
 
-    if comment_count > 200000:
+    if comment_count > 1000000:
         break
 
     # don't save unnecessary stuff
@@ -70,7 +70,7 @@ print 'making dataframe'
 comments_df = pd.DataFrame.from_dict(comments, orient='columns')
 
 print 'Saving comments to csv'
-comments_df.to_csv('data/2017_comments_trimmed.csv', sep='\t', encoding = 'utf-8')
+comments_df.to_csv('data/2017_comments_1m_trimmed.csv', sep='\t', encoding = 'utf-8')
 
 ########################################## Create a users data frame from the comments
 print 'Calculating authors'
@@ -87,4 +87,4 @@ for author in authors_set:
 users_df = pd.DataFrame(users_jsons)
 
 print 'Saving comments to csv'
-users_df.to_csv('data/2017_users_trimmed.csv', encoding = 'utf-8')
+users_df.to_csv('data/2017_users_1m_trimmed.csv', encoding = 'utf-8')

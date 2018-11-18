@@ -94,8 +94,8 @@ def connect_via_n_comment(n):
             bipartite_graph.AddEdge(int(subreddit_node_id), int(user_node_id))
 
 print 'Adding edges'
-# connect_via_n_comment(1)
-connect_via_n_comment(2)
+connect_via_n_comment(1)
+# connect_via_n_comment(2)
 # connect_via_n_comment(3)
 
 # TODO alternative ways to decide if user and subreddit are connected

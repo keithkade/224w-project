@@ -5,6 +5,7 @@ author: kade
 """
 
 import snap
+import ast
 from itertools import combinations
 
 import sys
@@ -47,6 +48,8 @@ def fold_graph():
       folded_graph.AddNode(int(key))
       nodes_list.append(key)
 
+  shared_commenter_counts = {}
+
   # connect all subreddits where the same user commented in both
   for user in users:
       user_node = graph_to_fold.GetNI(int(info_to_node_id[user.name]))
@@ -55,7 +58,22 @@ def fold_graph():
           neighbors.append(neighbor_id)
       comb = combinations(neighbors, 2)
       for pair in list(comb):
-          folded_graph.AddEdge(int(pair[0]), int(pair[1]))
+        # folded_graph.AddEdge(int(pair[0]), int(pair[1]))
+        sorted_pair = str(sorted([int(pair[0]), int(pair[1])]))
+        if sorted_pair in shared_commenter_counts:
+          shared_commenter_counts[sorted_pair] += 1
+        else:
+          shared_commenter_counts[sorted_pair] = 1
+
+  # Only connect nodes if there are at least N shared commenters
+  N = 8
+  for pair in shared_commenter_counts:
+    if shared_commenter_counts[pair] >= N:
+      pair_arr = ast.literal_eval(pair)
+      folded_graph.AddEdge(pair_arr[0], pair_arr[1])
+
+  # print shared_commenter_counts
+  # folded_graph.AddEdge(int(pair[0]), int(pair[1]))
 
   print 'Saving graph'
   FOut = snap.TFOut(folded_grph_str)
