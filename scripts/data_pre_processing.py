@@ -88,3 +88,11 @@ users_df = pd.DataFrame(users_jsons)
 
 print 'Saving comments to csv'
 users_df.to_csv('data/2017_users_trimmed.csv', encoding = 'utf-8')
+
+
+# Authors: includes users' karma used for troll detection
+authors = []
+for line in open('data\2016_authors.json', 'r'):
+    author = json.loads(line)
+    if author['name'] in users_df.name.values:
+        authors.append(author)
