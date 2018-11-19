@@ -22,10 +22,13 @@ comments_file = '/Volumes/TIME/reddit data/RC_2017-05.txt'
 
 invalid_names = set(['[deleted]', 'ithinkisaidtoomuch', 'Concise_AMA_Bot', 'AutoModerator'])
 valid_subs = set(map(lambda x: x.name, subreddits))
-# mostly the defaults
+# mostly the defaults. also some with weirdly high comment count, and non-political ones
 blacklist = set(['AskReddit', 'funny', 'pics', 'gaming', 'videos', 'movies',
 'mildlyinteresting', 'OldSchoolCool', 'todayilearned', 'AdviceAnimals', 'gifs',
-'aww', 'blog', 'books', 'food', 'askscience', 'Showerthoughts', 'photoshopbattles'])
+'aww', 'blog', 'books', 'food', 'askscience', 'Showerthoughts', 'photoshopbattles',
+'photoshopbattles', 'gonewild', 'forhonor', 'RocketLeagueExchange', 'RocketLeague',
+'Sneakers', 'GamingCircleJerk', 'counting', 'darksouls3', 'Warhammer40k',
+'EliteDangerous', 'DnD', 'hearthstone', 'Drugs', 'Bitcoin', 'Anime', 'Ice_Poseidon'])
 
 comments = []
 comment_count = 0
@@ -54,7 +57,7 @@ for line in open(comments_file, 'r'):
     comment_count += 1
     print comment_count
 
-    if comment_count > 200000:
+    if comment_count > 1000000:
         break
 
     # don't save unnecessary stuff
@@ -70,7 +73,7 @@ print 'making dataframe'
 comments_df = pd.DataFrame.from_dict(comments, orient='columns')
 
 print 'Saving comments to csv'
-comments_df.to_csv('data/2017_comments_trimmed.csv', sep='\t', encoding = 'utf-8')
+comments_df.to_csv('data/2017_comments_1m_trimmed.csv', sep='\t', encoding = 'utf-8')
 
 ########################################## Create a users data frame from the comments
 print 'Calculating authors'
@@ -87,6 +90,7 @@ for author in authors_set:
 users_df = pd.DataFrame(users_jsons)
 
 print 'Saving comments to csv'
+<<<<<<< HEAD
 users_df.to_csv('data/2017_users_trimmed.csv', encoding = 'utf-8')
 
 
@@ -96,3 +100,6 @@ for line in open('data\2016_authors.json', 'r'):
     author = json.loads(line)
     if author['name'] in users_df.name.values:
         authors.append(author)
+=======
+users_df.to_csv('data/2017_users_1m_trimmed.csv', encoding = 'utf-8')
+>>>>>>> 6b7144e258b22154ae311b15047ffffc922b2322
