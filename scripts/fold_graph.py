@@ -13,7 +13,7 @@ sys.path.append('scripts/')
 
 from subreddits import get_filtered_subreddits
 from users import users
-from settings import subreddit_subscriber_cutoff
+from settings import subreddit_subscriber_cutoff, fold_commentor_threshold
 
 subreddits = get_filtered_subreddits(subreddit_subscriber_cutoff)
 
@@ -66,7 +66,7 @@ def fold_graph():
           shared_commenter_counts[sorted_pair] = 1
 
   # Only connect nodes if there are at least N shared commenters
-  N = 8
+  N = fold_commentor_threshold
   for pair in shared_commenter_counts:
     if shared_commenter_counts[pair] >= N:
       pair_arr = ast.literal_eval(pair)
