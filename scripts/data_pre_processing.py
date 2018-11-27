@@ -142,4 +142,19 @@ for author in authors_set:
 users_df = pd.DataFrame(users_jsons)
 
 print 'Saving comments to csv'
+
 users_df.to_csv('data/2017_users_1m_political.csv', encoding = 'utf-8')
+
+# Authors: includes users' karma used for troll detection
+authors = []
+for line in open('data\2016_authors.json', 'r'):
+    author = json.loads(line)
+    if author['name'] in users_df.name.values:
+        authors.append(author)
+
+authors_df = pd.DataFrame([])
+for author in authors:
+    df = pd.DataFrame.from_dict([comment], orient='columns')
+    authors_df = comments_df.append(df)
+
+authors_df.to_csv('data/2017_authors.csv', encoding = 'utf-8')
