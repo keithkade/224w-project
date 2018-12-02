@@ -13,7 +13,9 @@ from sklearn.mixture import GMM
 import matplotlib.pyplot as plt
 import numpy as np
 
-comments_df = pd.read_csv('data/sample_comments.csv', sep='\t', encoding = 'utf-8')
+# comments_df = pd.read_csv('data/sample_comments.csv', sep='\t', encoding = 'utf-8')
+# comments_df = pd.read_csv('data/2017_comments_1m_political.csv', sep='\t', encoding = 'utf-8')
+comments_df = pd.read_csv('data/2017_comments_whitelist_capped.csv', sep='\t', encoding = 'utf-8')
 
 # Get the datetime of the comment
 comments_df['comment_date_time'] = comments_df['retrieved_on'].apply(lambda x: str(datetime.datetime.fromtimestamp(x)))
@@ -44,6 +46,7 @@ comments_df['no_words'] = comments_df['body'].apply(lambda x: break_sentences(x)
 
 #### Community feature set ####
 authors_df = pd.read_csv("data/sample_authors.csv")
+authors_df = pd.read_csv('data/2017_authors.csv', encoding = 'utf-8')
 
 
 #### Combine community and post feature sets and aggregate by author ####

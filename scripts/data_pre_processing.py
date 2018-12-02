@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sat Nov 03 12:39:57 2018
-
 @author: dimit_000
 """
 
@@ -159,15 +158,16 @@ print 'Saving comments to csv'
 users_df.to_csv('data/2017_users_whitelist_capped.csv', encoding = 'utf-8')
 
 # Authors: includes users' karma used for troll detection
+users_df = pd.read_csv('data/2017_users_whitelist_capped.csv', encoding = 'utf-8')
 authors = []
-for line in open('data\2016_authors.json', 'r'):
+for line in open('data/all_authors.json', 'r'):
     author = json.loads(line)
     if author['name'] in users_df.name.values:
         authors.append(author)
 
 authors_df = pd.DataFrame([])
 for author in authors:
-    df = pd.DataFrame.from_dict([comment], orient='columns')
+    df = pd.DataFrame.from_dict([author], orient='columns')
     authors_df = comments_df.append(df)
 
 authors_df.to_csv('data/2017_authors.csv', encoding = 'utf-8')
