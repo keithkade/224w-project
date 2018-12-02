@@ -18,8 +18,8 @@ subreddits = get_filtered_subreddits(subreddit_subscriber_cutoff)
 comment_json_attributes_to_save = ['author', 'body', 'controversiality',
 'gilded', 'id', 'score', 'subreddit', 'subreddit_id']
 
-# note: this file has at least 54,304,078 comments
-comments_file = '/Volumes/TIME/reddit data/RC_2017-05.txt'
+# note: this file has 79,810,360 comments
+comments_files = ['/Volumes/TIME/reddit data/RC_2017-05.txt', '/Volumes/TIME/reddit data/RC_2017-06.txt']
 
 invalid_names = set(['[deleted]', 'ithinkisaidtoomuch', 'Concise_AMA_Bot', 'AutoModerator'])
 valid_subs = set(map(lambda x: x.name, subreddits))
@@ -80,52 +80,67 @@ whitelist = set(["BenCarson","ChrisChristie","TedCruz","Carly_Fiorina","Jindal",
 comments = []
 comment_count = 0
 skip_count = 0
+subreddit_comment_counts = {}
+for sub in whitelist:
+    subreddit_comment_counts[sub] = 0
 
 print 'about to read the file'
-for line in open(comments_file, 'r'):
-    comment = json.loads(line)
+for comments_file in comments_files:
+    for line in open(comments_file, 'r'):
+        comment = json.loads(line)
 
-    # sanitize the comment body
-    comment['body'] = re.sub('[^A-Za-z0-9]+', ' ', comment['body'])
+        # sanitize the comment body
+        comment['body'] = re.sub('[^A-Za-z0-9]+', ' ', comment['body'])
 
-    if comment['author'] in invalid_names: # skip problem comments
-        skip_count += 1
-        continue
+        if skip_count % 100000 == 0:
+            print 'skipped:' + str(skip_count)
 
-    if comment['subreddit'] not in valid_subs: # skip long tail of niche subreddits
-        # print comment['subreddit']
-        skip_count += 1
-        continue
+        if comment['subreddit'] not in whitelist: # skip non political subreddits
+            skip_count += 1
+            continue
 
-    # if comment['subreddit'] in blacklist: # skip popular non political subreddits
-    #     skip_count += 1
-    #     continue
+        if comment['author'] in invalid_names: # skip problem comments
+            skip_count += 1
+            continue
 
-    if comment['subreddit'] not in whitelist: # skip non political subreddits
-        skip_count += 1
-        continue
+        # if comment['subreddit'] not in valid_subs: # skip long tail of niche subreddits
+        #     # print comment['subreddit']
+        #     skip_count += 1
+        #     continue
 
-    comment_count += 1
-    if comment_count % 1000 == 0:
-        print comment_count
+        # if comment['subreddit'] in blacklist: # skip popular non political subreddits
+        #     skip_count += 1
+        #     continue
 
-    if comment_count > 1000000:
-        break
+        if subreddit_comment_counts[comment['subreddit']] > 1000:
+            skip_count += 1
+            continue
 
-    # don't save unnecessary stuff
-    new_comment = {}
-    for attrib in comment_json_attributes_to_save:
-        new_comment[attrib] = comment[attrib]
+        subreddit_comment_counts[comment['subreddit']] += 1
 
-    comments.append(new_comment)
+        comment_count += 1
+        if comment_count % 1000 == 0:
+            print 'added:' + str(comment_count)
+
+        if comment_count > 100000:
+            break
+
+        # don't save unnecessary stuff
+        new_comment = {}
+        for attrib in comment_json_attributes_to_save:
+            new_comment[attrib] = comment[attrib]
+
+        comments.append(new_comment)
 
 print 'pruned ' + str(skip_count) + ' comments'
+
+print subreddit_comment_counts
 
 print 'making dataframe'
 comments_df = pd.DataFrame.from_dict(comments, orient='columns')
 
 print 'Saving comments to csv'
-comments_df.to_csv('data/2017_comments_1m_political.csv', sep='\t', encoding = 'utf-8')
+comments_df.to_csv('data/2017_comments_whitelist_capped.csv', sep='\t', encoding = 'utf-8')
 
 ########################################## Create a users data frame from the comments
 print 'Calculating authors'
@@ -143,7 +158,7 @@ users_df = pd.DataFrame(users_jsons)
 
 print 'Saving comments to csv'
 
-users_df.to_csv('data/2017_users_1m_political.csv', encoding = 'utf-8')
+users_df.to_csv('data/2017_users_whitelist_capped.csv', encoding = 'utf-8')
 
 # Authors: includes users' karma used for troll detection
 authors = []
