@@ -5,8 +5,8 @@ Created on Sat Nov 03 12:39:57 2018
 @author: dimit_000
 """
 
-# note: this file has at least 54,304,078 comments
-comments_file = '/Volumes/TIME/reddit data/RC_2017-05.txt'
+# note: this file has 2,885,440 comments
+comments_file = '/Volumes/TIME/reddit data/RC_filtered.txt'
 
 comment_count = 0
 
