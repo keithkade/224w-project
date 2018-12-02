@@ -35,6 +35,13 @@ for row in comments_df.itertuples():
     comment = Comment(row)
     comments.append(comment)
 
+    # manually looking at some potential trolls
+    # if comment.author == 'Diclicious666' or comment.author == 'TheMadKing1988' or comment.author == 'great_gape':
+    #     print '======'
+    #     print comment.author + ' in ' + comment.subreddit
+    #     print comment.body
+
+
 def count_sub_comments():
     subreddit_counts = {}
     for comment in comments:
