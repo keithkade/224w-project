@@ -165,9 +165,5 @@ for line in open('data/all_authors.json', 'r'):
     if author['name'] in users_df.name.values:
         authors.append(author)
 
-authors_df = pd.DataFrame([])
-for author in authors:
-    df = pd.DataFrame.from_dict([author], orient='columns')
-    authors_df = comments_df.append(df)
-
+authors_df = pd.DataFrame.from_dict(authors, orient='columns')
 authors_df.to_csv('data/2017_authors.csv', encoding = 'utf-8')
