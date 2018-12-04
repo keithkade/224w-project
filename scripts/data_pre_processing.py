@@ -18,7 +18,7 @@ subreddits = get_filtered_subreddits(subreddit_subscriber_cutoff)
 comment_json_attributes_to_save = ['author', 'body', 'controversiality',
 'gilded', 'id', 'score', 'subreddit', 'subreddit_id']
 
-comments_file = '/Volumes/TIME/reddit data/RC_filtered.txt'
+comments_file = '/Volumes/TIME/reddit data/RC_2016_filtered.txt'
 
 invalid_names = set(['[deleted]', 'ithinkisaidtoomuch', 'Concise_AMA_Bot', 'AutoModerator'])
 valid_subs = set(map(lambda x: x.name, subreddits))
@@ -78,7 +78,7 @@ whitelist = set(["BenCarson","ChrisChristie","TedCruz","Carly_Fiorina","Jindal",
 
 comments = []
 comment_count = 0
-skip_count = 0
+skip_count = 1
 subreddit_comment_counts = {}
 for sub in whitelist:
     subreddit_comment_counts[sub] = 0
@@ -131,6 +131,7 @@ for line in open(comments_file, 'r'):
     comments.append(new_comment)
 
 print 'pruned ' + str(skip_count) + ' comments'
+print 'used ' + str(comment_count) + ' comments'
 
 print subreddit_comment_counts
 
@@ -138,7 +139,7 @@ print 'making dataframe'
 comments_df = pd.DataFrame.from_dict(comments, orient='columns')
 
 print 'Saving comments to csv'
-comments_df.to_csv('data/2017_comments_whitelist_capped.csv', sep='\t', encoding = 'utf-8')
+comments_df.to_csv('data/2016_comments_whitelist_capped.csv', sep='\t', encoding = 'utf-8')
 
 ########################################## Create a users data frame from the comments
 print 'Calculating authors'
@@ -156,7 +157,7 @@ users_df = pd.DataFrame(users_jsons)
 
 print 'Saving comments to csv'
 
-users_df.to_csv('data/2017_users_whitelist_capped.csv', encoding = 'utf-8')
+users_df.to_csv('data/2016_users_whitelist_capped.csv', encoding = 'utf-8')
 
 # Authors: includes users' karma used for troll detection
 authors = []
@@ -170,4 +171,4 @@ for author in authors:
     df = pd.DataFrame.from_dict([comment], orient='columns')
     authors_df = comments_df.append(df)
 
-authors_df.to_csv('data/2017_authors.csv', encoding = 'utf-8')
+authors_df.to_csv('data/2016_authors.csv', encoding = 'utf-8')

@@ -30,7 +30,9 @@ if os.path.isfile(out_file):
 f = open(out_file, "a")
 f.write('Source Target\n')
 
+
 with open('graphs/deconvolved_folded_edgelist.txt') as csv_file:
+# with open('graphs/bipartite_connected_by_comment_folded_edgelist.txt') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter='\t')
 
     for row in csv_reader:

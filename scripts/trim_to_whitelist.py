@@ -19,9 +19,9 @@ comment_json_attributes_to_save = ['author', 'body', 'controversiality',
 'gilded', 'id', 'score', 'subreddit', 'subreddit_id']
 
 # note: this file has 79,810,360 comments
-comments_files = ['/Volumes/TIME/reddit data/RC_2017-05.txt', '/Volumes/TIME/reddit data/RC_2017-06.txt']
+comments_files = ['/Volumes/TIME/reddit data/RC_2016-02', '/Volumes/TIME/reddit data/RC_2016-03']
 
-out_file = '/Volumes/TIME/reddit data/RC_filtered.txt'
+out_file = '/Volumes/TIME/reddit data/RC_2016_filtered.txt'
 
 invalid_names = set(['[deleted]', 'ithinkisaidtoomuch', 'Concise_AMA_Bot', 'AutoModerator'])
 
@@ -78,7 +78,7 @@ subreddit_comment_counts = {}
 for sub in whitelist:
     subreddit_comment_counts[sub] = 0
 
-os.remove(out_file)
+# os.remove(out_file)
 with open(out_file, 'a') as f:
     for comments_file in comments_files:
         for line in open(comments_file, 'r'):
