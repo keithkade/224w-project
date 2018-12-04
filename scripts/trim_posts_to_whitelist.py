@@ -55,7 +55,7 @@ post_json_attributes_to_save = ['author', 'subreddit', 'subreddit_id',
 'selftext', 'score', 'score', 'num_comments', 'id', 'title', 'ups', 'downs']
 
 skip_count = 0
-comment_count = 0
+post_count = 0
 with open(out_file, 'a') as f:
     for posts_file in posts_files:
         for line in open(posts_file, 'r'):
@@ -65,10 +65,10 @@ with open(out_file, 'a') as f:
             post['selftext'] = re.sub('[^A-Za-z0-9]+', ' ', post['selftext'])
             post['title'] = re.sub('[^A-Za-z0-9]+', ' ', post['title'])
 
-            if skip_count % 100000 == 0:
+            if skip_count % 1000 == 0:
                 print 'skipped:' + str(skip_count)
 
-            if post['subreddit'] not in whitelist: # skip non political subreddits
+            if 'subreddit' not in post or post['subreddit'] not in whitelist: # skip non political subreddits
                 skip_count += 1
                 continue
 
@@ -82,7 +82,7 @@ with open(out_file, 'a') as f:
             if post_count % 1000 == 0:
                 break
 
-            if post_count % 100000 == 0:
+            if post_count % 10 == 0:
                 print 'added:' + str(post_count)
 
             # don't save unnecessary stuff
