@@ -4,34 +4,11 @@ Created on Sat Nov 03 12:39:57 2018
 @author: dimit_000
 """
 
-import os
 import pandas as pd
 import json
-import re
-from pprint import pprint
-from settings import subreddit_subscriber_cutoff
-from subreddits import get_filtered_subreddits
 
-subreddits = get_filtered_subreddits(subreddit_subscriber_cutoff)
+posts_file = '/Volumes/TIME/reddit data/RS_2016_filtered.txt'
 
-comment_json_attributes_to_save = ['author', 'body', 'controversiality',
-'gilded', 'id', 'score', 'subreddit', 'subreddit_id']
-
-comments_file = '/Volumes/TIME/reddit data/RC_2016_filtered.txt'
-
-invalid_names = set(['[deleted]', 'ithinkisaidtoomuch', 'Concise_AMA_Bot', 'AutoModerator'])
-valid_subs = set(map(lambda x: x.name, subreddits))
-# mostly the defaults. also some with weirdly high comment count, and non-political ones
-blacklist = set(['AskReddit', 'funny', 'pics', 'gaming', 'videos', 'movies',
-'mildlyinteresting', 'OldSchoolCool', 'todayilearned', 'AdviceAnimals', 'gifs',
-'aww', 'blog', 'books', 'food', 'askscience', 'Showerthoughts', 'photoshopbattles',
-'photoshopbattles', 'gonewild', 'forhonor', 'RocketLeagueExchange', 'RocketLeague',
-'Sneakers', 'GamingCircleJerk', 'counting', 'darksouls3', 'Warhammer40k',
-'EliteDangerous', 'DnD', 'hearthstone', 'Drugs', 'Bitcoin', 'Anime', 'Ice_Poseidon'])
-
-# white list generate with the following JS
-# JSON.stringify(Array.from(document.getElementsByClassName('wiki')[0].getElementsByTagName('a')).map(x => x.href).filter(href => href.includes('/r/')).map(href => href.substring(href.indexOf('/r/')+3, href.length)).filter(href => !(href.includes('/') || href.includes('+'))))
-# on https://www.reddit.com/r/politics/wiki/relatedsubs
 whitelist = set(["BenCarson","ChrisChristie","TedCruz","Carly_Fiorina","Jindal",
 "KasichForPresident","RandPaul","Marco_Rubio","RickSantorum","AskTrumpSupporters",
 "The_Donald","HillaryClinton","HillaryForAmerica","MartinOMalley","SandersForPresident",
@@ -75,72 +52,47 @@ whitelist = set(["BenCarson","ChrisChristie","TedCruz","Carly_Fiorina","Jindal",
 "Worldnews","WorldPoliticalHumour","Worldpolitics","Austrian_Economics","Business",
 "Economics","InternationalBusiness"])
 
-comments = []
-comment_count = 0
+posts = []
+post_count = 0
 skip_count = 1
-subreddit_comment_counts = {}
+subreddit_post_counts = {}
 for sub in whitelist:
-    subreddit_comment_counts[sub] = 0
+    subreddit_post_counts[sub] = 0
 
 print 'about to read the file'
-for line in open(comments_file, 'r'):
-    comment = json.loads(line)
-
-    # sanitize the comment body
-    comment['body'] = re.sub('[^A-Za-z0-9]+', ' ', comment['body'])
+for line in open(posts_file, 'r'):
+    post = json.loads(line)
 
     if skip_count % 100000 == 0:
         print 'skipped:' + str(skip_count)
 
-    if comment['subreddit'] not in whitelist: # skip non political subreddits
+    if subreddit_post_counts[post['subreddit']] > 1000:
         skip_count += 1
         continue
 
-    if comment['author'] in invalid_names: # skip problem comments
-        skip_count += 1
-        continue
+    subreddit_post_counts[post['subreddit']] += 1
 
-    # if comment['subreddit'] not in valid_subs: # skip long tail of niche subreddits
-    #     # print comment['subreddit']
-    #     skip_count += 1
-    #     continue
+    post_count += 1
+    if post_count % 1000 == 0:
+        print 'added:' + str(post_count)
 
-    # if comment['subreddit'] in blacklist: # skip popular non political subreddits
-    #     skip_count += 1
-    #     continue
-
-    if subreddit_comment_counts[comment['subreddit']] > 1000:
-        skip_count += 1
-        continue
-
-    subreddit_comment_counts[comment['subreddit']] += 1
-
-    comment_count += 1
-    if comment_count % 1000 == 0:
-        print 'added:' + str(comment_count)
-
-    # don't save unnecessary stuff
-    new_comment = {}
-    for attrib in comment_json_attributes_to_save:
-        new_comment[attrib] = comment[attrib]
-
-    comments.append(new_comment)
+    posts.append(post)
 
 print 'pruned ' + str(skip_count) + ' comments'
-print 'used ' + str(comment_count) + ' comments'
+print 'used ' + str(post_count) + ' comments'
 
-print subreddit_comment_counts
+print subreddit_post_counts
 
 print 'making dataframe'
-comments_df = pd.DataFrame.from_dict(comments, orient='columns')
+posts_df = pd.DataFrame.from_dict(posts, orient='columns')
 
 print 'Saving comments to csv'
-comments_df.to_csv('data/2016_comments_whitelist_capped.csv', sep='\t', encoding = 'utf-8')
+posts_df.to_csv('data/2016_posts_whitelist_capped.csv', sep='\t', encoding = 'utf-8')
 
 ########################################## Create a users data frame from the comments
 print 'Calculating authors'
 authors_set = set()
-for row in comments_df.itertuples():
+for row in posts_df.itertuples():
     authors_set.add(row.author)
 
 # make a list
@@ -150,18 +102,4 @@ for author in authors_set:
 
 # then a dataframe
 users_df = pd.DataFrame(users_jsons)
-
-print 'Saving comments to csv'
-
-users_df.to_csv('data/2016_users_whitelist_capped.csv', encoding = 'utf-8')
-
-# Authors: includes users' karma used for troll detection
-users_df = pd.read_csv('data/2017_users_whitelist_capped.csv', encoding = 'utf-8')
-authors = []
-for line in open('data/all_authors.json', 'r'):
-    author = json.loads(line)
-    if author['name'] in users_df.name.values:
-        authors.append(author)
-
-authors_df = pd.DataFrame.from_dict(authors, orient='columns')
-authors_df.to_csv('data/2017_authors.csv', encoding = 'utf-8')
+users_df.to_csv('data/2016_post_authors.csv', encoding = 'utf-8')
