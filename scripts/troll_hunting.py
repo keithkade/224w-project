@@ -12,10 +12,12 @@ import re
 from sklearn.mixture import GMM
 import matplotlib.pyplot as plt
 import numpy as np
+from profanity import profanity
 
 # comments_df = pd.read_csv('data/sample_comments.csv', sep='\t', encoding = 'utf-8')
 # comments_df = pd.read_csv('data/2017_comments_1m_political.csv', sep='\t', encoding = 'utf-8')
 comments_df = pd.read_csv('data/2017_comments_whitelist_capped.csv', sep='\t', encoding = 'utf-8')
+comments_df = pd.read_csv('data/2017_comments_1m_political.csv', sep='\t', encoding = 'utf-8')
 
 # Get the datetime of the comment
 comments_df['comment_date_time'] = comments_df['retrieved_on'].apply(lambda x: str(datetime.datetime.fromtimestamp(x)))
@@ -27,9 +29,14 @@ comments_df.body.fillna('', inplace = True)
 comments_df['readability_index'] = comments_df['body'].apply(lambda x: textstat.automated_readability_index(x))
 comments_df['readability_score'] = comments_df['body'].apply(lambda x: textstat.dale_chall_readability_score(x))
 comments_df['reading_ease'] = comments_df['body'].apply(lambda x: textstat.flesch_reading_ease(x))
-comments_df['grade_level'] = comments_df['body'].apply(lambda x: textstat.smog_index(x))
+comments_df.loc[comments_df['reading_ease'] <0, 'reading_ease'] = 0
+comments_df['reading_ease'] = comments_df['reading_ease'].max() - comments_df['reading_ease']
 comments_df['difficult_words'] = comments_df['body'].apply(lambda x: textstat.difficult_words(x))
-comments_df['post_standard'] = comments_df['body'].apply(lambda x: textstat.text_standard(x))
+comments_df['post_standard'] = comments_df['body'].apply(lambda x: textstat.text_standard(x, True))
+comments_df['profanity'] = comments_df['body'].apply(lambda x: profanity.contains_profanity(x))
+
+
+
  
 
 # Splits the text into sentences, using  
@@ -45,15 +52,15 @@ comments_df['no_words'] = comments_df['body'].apply(lambda x: break_sentences(x)
 
 
 #### Community feature set ####
-authors_df = pd.read_csv("data/sample_authors.csv")
+# authors_df = pd.read_csv("data/sample_authors.csv")
 authors_df = pd.read_csv('data/2017_authors.csv', encoding = 'utf-8')
 
 
 #### Combine community and post feature sets and aggregate by author ####
-authors_df = pd.merge(authors_df, comments_df, left_on = 'name', right_on = 'author')
+authors_features = pd.merge(authors_df, comments_df, left_on = 'name', right_on = 'author')
 
 # summarize features by user
-authors_features = authors_df.groupby("name")[["comment_karma", "link_karma", "readability_index", "readability_score", "reading_ease", "grade_level", "difficult_words", "post_standard", "no_words"]].mean()
+authors_features = authors_features.groupby("name")[["comment_karma", "link_karma", "readability_index", "readability_score", "reading_ease", "difficult_words", "post_standard", "no_words", "score", "controversiality", "profanity"]].mean()
 
 #### Cluster user features ####
 X = authors_features.values
@@ -68,7 +75,7 @@ plt.legend(loc='best')
 plt.xlabel('n_components');
 
 # Fit GMM
-gmm = GMM(n_components=5).fit(X)
+gmm = GMM(n_components=9).fit(X)
 labels = gmm.predict(X)
 
 # Append and interpret clusters
@@ -78,8 +85,13 @@ labels_df = pd.DataFrame(data=labels,    # values
 
 authors_features = authors_features.join(labels_df)
 
-authors_features.groupby("label")[["comment_karma", "link_karma", "readability_index", "readability_score", "reading_ease", "grade_level", "difficult_words", "post_standard", "no_words"]].mean()
+authors_features.groupby("label")[["comment_karma", "link_karma", "readability_index", "readability_score", "reading_ease", "difficult_words", "post_standard", "no_words", "score", "controversiality", "profanity"]].mean()
 
+authors_features.label.value_counts()
+
+authors_features[authors_features.index == "Diclicious666"]
+authors_features[authors_features.index == "TheMadKing1988"]
+authors_features[authors_features.index == "great_gape"]
 
 cluster0_indices = np.where(labels==0)
 authors_df.iloc[cluster0_indices]
