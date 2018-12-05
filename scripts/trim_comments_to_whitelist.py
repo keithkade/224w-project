@@ -19,7 +19,7 @@ comment_json_attributes_to_save = ['author', 'body', 'controversiality',
 'gilded', 'id', 'score', 'subreddit', 'subreddit_id']
 
 # note: this file has 79,810,360 comments
-comments_files = ['/Volumes/TIME/reddit data/RC_2016-02', '/Volumes/TIME/reddit data/RC_2016-03']
+comments_files = ['/Volumes/TIME/reddit data/RC_2016-01', '/Volumes/TIME/reddit data/RC_2016-02', '/Volumes/TIME/reddit data/RC_2016-03']
 
 out_file = '/Volumes/TIME/reddit data/RC_2016_filtered.txt'
 
@@ -71,12 +71,8 @@ whitelist = set(["BenCarson","ChrisChristie","TedCruz","Carly_Fiorina","Jindal",
 "Worldnews","WorldPoliticalHumour","Worldpolitics","Austrian_Economics","Business",
 "Economics","InternationalBusiness"])
 
-comments = []
 comment_count = 0
 skip_count = 0
-subreddit_comment_counts = {}
-for sub in whitelist:
-    subreddit_comment_counts[sub] = 0
 
 # os.remove(out_file)
 with open(out_file, 'a') as f:

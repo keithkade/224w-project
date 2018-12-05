@@ -46,7 +46,7 @@ whitelist = set(["BenCarson","ChrisChristie","TedCruz","Carly_Fiorina","Jindal",
 "Worldnews","WorldPoliticalHumour","Worldpolitics","Austrian_Economics","Business",
 "Economics","InternationalBusiness"])
 
-posts_files = ['/Volumes/TIME/reddit data/RS_2016-02', '/Volumes/TIME/reddit data/RS_2016-03']
+posts_files = ['/Volumes/TIME/reddit data/RS_2016-01', '/Volumes/TIME/reddit data/RS_2016-02', '/Volumes/TIME/reddit data/RS_2016-03']
 out_file = '/Volumes/TIME/reddit data/RS_2016_filtered.txt'
 
 invalid_names = set(['[deleted]'])
@@ -65,7 +65,7 @@ with open(out_file, 'a') as f:
             post['selftext'] = re.sub('[^A-Za-z0-9]+', ' ', post['selftext'])
             post['title'] = re.sub('[^A-Za-z0-9]+', ' ', post['title'])
 
-            if skip_count % 1000 == 0:
+            if skip_count % 100000 == 0:
                 print 'skipped:' + str(skip_count)
 
             if 'subreddit' not in post or post['subreddit'] not in whitelist: # skip non political subreddits
@@ -78,11 +78,7 @@ with open(out_file, 'a') as f:
 
             post_count += 1
 
-            # for testing
-            if post_count % 1000 == 0:
-                break
-
-            if post_count % 10 == 0:
+            if post_count % 10000 == 0:
                 print 'added:' + str(post_count)
 
             # don't save unnecessary stuff

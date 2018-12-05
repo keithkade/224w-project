@@ -14,6 +14,7 @@ from settings import subreddit_subscriber_cutoff
 from subreddits import get_filtered_subreddits
 from users import users
 from comments import comments
+from posts import posts
 
 subreddits = get_filtered_subreddits(subreddit_subscriber_cutoff)
 
@@ -74,8 +75,8 @@ def connect_via_n_comment(n):
         user_comment_counts[comment.author] += 1
 
     for comment in comments:
-        # ignore super active accounts. #TODO figure out better solution
-        if user_comment_counts[comment.author] > 100:
+        # ignore abnormally active accounts
+        if user_comment_counts[comment.author] > 200:
             continue
 
         subreddit_node_id = get_node_id_by_subreddit_id(comment.subreddit_id)
@@ -93,17 +94,50 @@ def connect_via_n_comment(n):
         if comment_counts[(int(subreddit_node_id), int(user_node_id))] >= n:
             bipartite_graph.AddEdge(int(subreddit_node_id), int(user_node_id))
 
+def connect_via_n_post(n):
+
+    user_post_counts = {}
+    for user in users:
+        user_post_counts[user.name] = 0
+
+    post_counts = {}
+
+    for post in posts:
+        user_post_counts[post.author] += 1
+
+    for post in posts:
+        # ignore abnormally active accounts
+        if user_post_counts[post.author] > 100:
+            continue
+
+        subreddit_node_id = get_node_id_by_subreddit_id(post.subreddit_id)
+        user_node_id = get_node_id_by_author(post.author)
+
+        user_post_counts[post.author] += 1
+
+        if subreddit_node_id != None and user_node_id != None:
+            if (int(subreddit_node_id), int(user_node_id)) in post_counts:
+                post_counts[(int(subreddit_node_id), int(user_node_id))] += 1
+            else:
+                post_counts[(int(subreddit_node_id), int(user_node_id))] = 1
+
+    for subreddit_node_id, user_node_id in post_counts:
+        if post_counts[(int(subreddit_node_id), int(user_node_id))] >= n:
+            bipartite_graph.AddEdge(int(subreddit_node_id), int(user_node_id))
+
+
 print 'Adding edges'
-connect_via_n_comment(1)
+# connect_via_n_comment(1)
 # connect_via_n_comment(2)
 # connect_via_n_comment(3)
 
-# TODO alternative ways to decide if user and subreddit are connected
+connect_via_n_post(1)
 
 print 'Nodes: ' + str(bipartite_graph.GetNodes())
 print 'Edges: ' + str(bipartite_graph.GetEdges())
 
 print 'Saving binary'
-FOut = snap.TFOut("graphs/bipartite_connected_by_comment.graph")
+# FOut = snap.TFOut("graphs/bipartite_connected_by_comment.graph")
+FOut = snap.TFOut("graphs/bipartite_connected_by_post.graph")
 bipartite_graph.Save(FOut)
 FOut.Flush()

@@ -74,5 +74,5 @@ def count_author_comments():
     print sorted(authors_sorted, reverse=True)[0:20]
     # print map(lambda x: x[1], sorted(subs_sorted, reverse=True)[0:40])
 
-count_sub_comments()
-count_author_comments()
+# count_sub_comments()
+# count_author_comments()

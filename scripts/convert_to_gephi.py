@@ -22,7 +22,7 @@ subreddit_count = len(subreddits)
 for subreddit in subreddits:
     node_id_to_info[str(subreddit.Index)] = { 'type': 'subreddit', 'id': subreddit.base36_id, 'name': subreddit.name }
 
-out_file = 'graphs/bipartite_connected_by_comment_folded_edgelist.csv'
+out_file = 'graphs/bipartite_connected_by_post_folded_edgelist.csv'
 
 if os.path.isfile(out_file):
     os.remove(out_file)
@@ -31,7 +31,7 @@ f = open(out_file, "a")
 f.write('Source Target\n')
 
 
-with open('graphs/deconvolved_folded_edgelist.txt') as csv_file:
+with open('graphs/bipartite_connected_by_post_folded_edgelist.txt') as csv_file:
 # with open('graphs/bipartite_connected_by_comment_folded_edgelist.txt') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter='\t')
 

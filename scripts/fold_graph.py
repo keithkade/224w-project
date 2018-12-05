@@ -13,12 +13,13 @@ sys.path.append('scripts/')
 
 from subreddits import get_filtered_subreddits
 from users import users
-from settings import subreddit_subscriber_cutoff, fold_commentor_threshold
+from settings import subreddit_subscriber_cutoff, fold_connection_threshold
 
 subreddits = get_filtered_subreddits(subreddit_subscriber_cutoff)
 
-graph_to_fold = 'graphs/bipartite_connected_by_comment.graph'
-folded_grph_str = 'graphs/bipartite_connected_by_comment_folded.graph'
+graph_to_fold = 'graphs/bipartite_connected_by_post.graph'
+folded_grph_str = 'graphs/bipartite_connected_by_post_folded.graph'
+folded_grph_edgelist = 'graphs/bipartite_connected_by_post_folded_edgelist.txt'
 
 FIn = snap.TFIn(graph_to_fold)
 graph_to_fold = snap.TUNGraph.Load(FIn)
@@ -76,7 +77,7 @@ def fold_graph():
           shared_commenter_counts[sorted_pair] = 1
 
   # Only connect nodes if there are at least N shared commenters
-  N = fold_commentor_threshold
+  N = fold_connection_threshold
   for pair in shared_commenter_counts:
     if shared_commenter_counts[pair] >= N:
       pair_arr = ast.literal_eval(pair)
@@ -122,4 +123,4 @@ print 'Folded Graph Edges: ' + str(folded_graph.GetEdges())
 # print map(lambda info: info[1]['name'], get_jaccard(folded_graph, int(info_to_node_id['t5_2cneq'])))
 
 # Save edgelist, because it's easier to read it in in networkx
-snap.SaveEdgeList(folded_graph, 'graphs/bipartite_connected_by_comment_folded_edgelist.txt')
+snap.SaveEdgeList(folded_graph, folded_grph_edgelist)

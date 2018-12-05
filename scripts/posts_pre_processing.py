@@ -78,8 +78,8 @@ for line in open(posts_file, 'r'):
 
     posts.append(post)
 
-print 'pruned ' + str(skip_count) + ' comments'
-print 'used ' + str(post_count) + ' comments'
+print 'pruned ' + str(skip_count) + ' posts'
+print 'used ' + str(post_count) + ' posts'
 
 print subreddit_post_counts
 
