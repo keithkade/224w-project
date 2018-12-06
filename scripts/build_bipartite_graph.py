@@ -10,11 +10,13 @@ sys.path.append('scripts/')
 
 import pandas as pd
 import snap
-from settings import subreddit_subscriber_cutoff
+
 from subreddits import subreddits
 from users import users
 from comments import comments
 from posts import posts
+
+from settings import connect_via_post, post_connection_threshold, connect_via_comment, comment_connection_threshold, bipartite_graph_file
 
 ################################################ Globals that get used later
 
@@ -93,7 +95,6 @@ def connect_via_n_comment(n):
             bipartite_graph.AddEdge(int(subreddit_node_id), int(user_node_id))
 
 def connect_via_n_post(n):
-
     user_post_counts = {}
     for user in users:
         user_post_counts[user.name] = 0
@@ -125,17 +126,15 @@ def connect_via_n_post(n):
 
 
 print 'Adding edges'
-# connect_via_n_comment(1)
-# connect_via_n_comment(2)
-# connect_via_n_comment(3)
+if connect_via_post:
+    connect_via_n_post(post_connection_threshold)
 
-connect_via_n_post(1)
+if connect_via_comment:
+    connect_via_n_comment(comment_connection_threshold)
 
-print 'Nodes: ' + str(bipartite_graph.GetNodes())
-print 'Edges: ' + str(bipartite_graph.GetEdges())
+print 'Bipartite graph Nodes: ' + str(bipartite_graph.GetNodes())
+print 'Bipartite graph Edges: ' + str(bipartite_graph.GetEdges())
 
-print 'Saving binary'
-# FOut = snap.TFOut("graphs/bipartite_connected_by_comment.graph")
-FOut = snap.TFOut("graphs/bipartite_connected_by_post.graph")
+FOut = snap.TFOut(bipartite_graph_file)
 bipartite_graph.Save(FOut)
 FOut.Flush()

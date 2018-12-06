@@ -11,7 +11,7 @@ import csv
 import os
 
 from subreddits import subreddits
-from settings import subreddit_subscriber_cutoff
+from settings import graph_str
 
 node_id_to_info = {}
 
@@ -20,7 +20,7 @@ subreddit_count = len(subreddits)
 for subreddit in subreddits:
     node_id_to_info[str(subreddit.Index)] = { 'type': 'subreddit', 'id': subreddit.base36_id, 'name': subreddit.name }
 
-out_file = 'graphs/bipartite_connected_by_post_folded_edgelist.csv'
+out_file = graph_str+'.csv'
 
 if os.path.isfile(out_file):
     os.remove(out_file)
@@ -28,9 +28,7 @@ if os.path.isfile(out_file):
 f = open(out_file, "a")
 f.write('Source Target\n')
 
-
-with open('graphs/bipartite_connected_by_post_folded_edgelist.txt') as csv_file:
-# with open('graphs/bipartite_connected_by_comment_folded_edgelist.txt') as csv_file:
+with open(graph_str+'.txt') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter='\t')
 
     for row in csv_reader:
