@@ -24,14 +24,3 @@ subreddits_df = pd.read_csv(subreddits_csv, encoding='utf-8')
 for row in subreddits_df.itertuples():
     subreddit = SubReddit(row)
     subreddits.append(subreddit)
-
-def get_filtered_subreddits(n):
-    popular_subs = []
-    newIndex = 0
-    for sub in subreddits:
-        if sub.subscriber_count != 'None' and int(sub.subscriber_count) > n:
-            sub.Index = newIndex
-            newIndex += 1
-            popular_subs.append(sub)
-
-    return popular_subs

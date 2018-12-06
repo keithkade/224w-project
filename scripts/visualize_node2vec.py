@@ -24,10 +24,8 @@ from gensim.models import Word2Vec
 from sklearn.manifold import TSNE
 from sklearn.cluster import KMeans
 from matplotlib import colors
-from subreddits import get_filtered_subreddits
+from subreddits import subreddits
 import snap
-
-
 
 weighted = False
 directed = False
@@ -39,13 +37,10 @@ workers = 8
 no_iter = 1
 graph_input = "graphs/bipartite_connected_by_comment_folded_edgelist.txt"
 
-
 # Keep the node id to name map
-subreddits = get_filtered_subreddits(10000)
 node_id_to_info = {}
 for subreddit in subreddits:
     node_id_to_info[subreddit.Index] = {'type': 'subreddit', 'id': subreddit.base36_id, 'name': subreddit.name }
-    
 
 def read_graph():
 	'''
@@ -73,7 +68,7 @@ def learn_embeddings(walks):
 	# model.wv.save_word2vec_format(output, binary=False)
 	return model
 
-# For now, node2vec will actually be equivelant to the deepwalk model 
+# For now, node2vec will actually be equivelant to the deepwalk model
 p, q = 1, 1
 nx_G = read_graph()
 # Keep only the largest connected component to run the node2vec model
@@ -103,7 +98,7 @@ x_labels = []
 for i, node_id in enumerate(model.wv.vocab.keys()):
     X[i,:] = model[node_id]
     x_labels.append(str(node_id_to_info[int(node_id)]['name']))
-    
+
 kmeans = KMeans(n_clusters=2, random_state=0).fit(X)
 label = kmeans.labels_
 

@@ -11,11 +11,9 @@ from itertools import combinations
 import sys
 sys.path.append('scripts/')
 
-from subreddits import get_filtered_subreddits
+from subreddits import subreddits
 from users import users
-from settings import subreddit_subscriber_cutoff, fold_connection_threshold
-
-subreddits = get_filtered_subreddits(subreddit_subscriber_cutoff)
+from settings import fold_connection_threshold
 
 graph_to_fold = 'graphs/bipartite_connected_by_post.graph'
 folded_grph_str = 'graphs/bipartite_connected_by_post_folded.graph'

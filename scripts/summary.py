@@ -1,9 +1,6 @@
-from subreddits import get_filtered_subreddits
+from subreddits import subreddits
 from users import users
 from comments import comments
-
-subs = get_filtered_subreddits(10000)
-
 
 user_comment_counts = {}
 for user in users:

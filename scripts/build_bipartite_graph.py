@@ -11,12 +11,10 @@ sys.path.append('scripts/')
 import pandas as pd
 import snap
 from settings import subreddit_subscriber_cutoff
-from subreddits import get_filtered_subreddits
+from subreddits import subreddits
 from users import users
 from comments import comments
 from posts import posts
-
-subreddits = get_filtered_subreddits(subreddit_subscriber_cutoff)
 
 ################################################ Globals that get used later
 

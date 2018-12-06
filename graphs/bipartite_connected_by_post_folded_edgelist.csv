@@ -14,6 +14,7 @@ obama alltheleft
 obama Ask_Politics
 obama Marco_Rubio
 obama TedCruz
+obama BenCarson
 obama 2016_elections
 ronpaul Conservative
 ronpaul Liberty
@@ -200,6 +201,7 @@ democrats alltheleft
 democrats Ask_Politics
 democrats AnythingGoesNews
 democrats Marco_Rubio
+democrats MartinOMalley
 democrats SandersForPresident
 democrats 2016_elections
 democrats KasichForPresident
@@ -303,13 +305,17 @@ NeutralPolitics SandersForPresident
 NeutralPolitics The_Donald
 NeutralPolitics AskTrumpSupporters
 Marco_Rubio TedCruz
+Marco_Rubio BenCarson
 Marco_Rubio 2016_elections
 Marco_Rubio KasichForPresident
 Marco_Rubio AskTrumpSupporters
+TedCruz BenCarson
 TedCruz 2016_elections
 TedCruz KasichForPresident
 TedCruz The_Donald
 TedCruz AskTrumpSupporters
+MartinOMalley SandersForPresident
+MartinOMalley KasichForPresident
 SandersForPresident 2016_elections
 SandersForPresident AskTrumpSupporters
 2016_elections KasichForPresident
