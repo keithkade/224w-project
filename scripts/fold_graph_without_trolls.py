@@ -66,7 +66,7 @@ def fold_graph():
               neighbors.append(neighbor_id)
           comb = combinations(neighbors, 2)
           for pair in list(comb):
-    
+
             # manually investigating the link between Conservative and SandersForPresident
             # Conservative: t5_2qh6p
             # SandersForPresident: t5_2zbq7
@@ -75,7 +75,7 @@ def fold_graph():
             #
             # if node_id_to_info[int(pair[1])]['name'] == 'Conservative' and node_id_to_info[int(pair[0])]['name'] == 'SandersForPresident':
             #   print user
-    
+
             sorted_pair = str(sorted([int(pair[0]), int(pair[1])]))
             if sorted_pair in shared_commenter_counts:
               shared_commenter_counts[sorted_pair] += 1

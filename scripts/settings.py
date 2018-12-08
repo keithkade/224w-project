@@ -58,7 +58,7 @@ comment_connection_threshold = 1 # haven't tried changing this yet
 
 fold_connection_threshold = 3
 should_deconvolve = True
-remove_trolls = True
+remove_trolls = False
 show_networkx_deconvolved = False
 
 comments_csv = 'data/'+year+'_comments_'+str(comments_cap)+'capped.csv'
@@ -71,9 +71,9 @@ comments_str = 'comments' if connect_via_comment else ''
 deconvolved_str = 'deconvolved' if should_deconvolve else ''
 comments_cap_str = str(comments_cap)+'CommentCap' if connect_via_comment else ''
 posts_cap_str = str(posts_cap)+'PostCap' if connect_via_post else ''
+trolls_str = 'without_trolls' if remove_trolls else ''
 
-# TODO add whether or not trolls are considered
-graph_str = 'graphs/'+year+'-'+str(fold_connection_threshold)+posts_str+comments_str+'-'+comments_cap_str+'-'+posts_cap_str+'-'+deconvolved_str
+graph_str = 'graphs/'+year+'-'+str(fold_connection_threshold)+posts_str+comments_str+'-'+comments_cap_str+'-'+posts_cap_str+'-'+deconvolved_str+'_'+trolls_str
 trolls_csv = 'data/'+year+'_trolls.csv'
 
 # white list generate with the following JS

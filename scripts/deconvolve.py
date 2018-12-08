@@ -11,13 +11,10 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import os
 
-from settings import graph_str, show_networkx_deconvolved, remove_trolls
+from settings import graph_str, show_networkx_deconvolved
 
 folded_grph_str = graph_str+'.txt'
 
-if remove_trolls:
-    folded_grph_str = graph_str+'_without_trolls.txt'
-    
 folded_graph = snap.LoadEdgeList(snap.PNGraph, folded_grph_str, 0, 1)
 os.remove(folded_grph_str)
 

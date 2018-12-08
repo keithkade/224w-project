@@ -7,6 +7,7 @@ author: kade
 import snap
 import ast
 import os
+import pandas as pd
 from itertools import combinations
 
 import sys
@@ -14,7 +15,9 @@ sys.path.append('scripts/')
 
 from subreddits import subreddits
 from users import users
-from settings import fold_connection_threshold, bipartite_graph_file, graph_str
+from settings import fold_connection_threshold, bipartite_graph_file, graph_str, trolls_csv, remove_trolls
+
+trolls_df = pd.read_csv(trolls_csv)
 
 graph_to_fold = bipartite_graph_file
 
@@ -51,6 +54,9 @@ def fold_graph():
 
   # connect all subreddits where the same user commented/posted in both
   for user in users:
+    if remove_trolls and user.name in trolls_df.name.values:
+      continue
+    else:
       user_node = graph_to_fold.GetNI(int(info_to_node_id[user.name]))
       neighbors = []
       for neighbor_id in user_node.GetOutEdges():
