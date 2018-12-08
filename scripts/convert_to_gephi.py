@@ -20,7 +20,7 @@ subreddit_count = len(subreddits)
 for subreddit in subreddits:
     node_id_to_info[str(subreddit.Index)] = { 'type': 'subreddit', 'id': subreddit.base36_id, 'name': subreddit.name }
 
-out_file = graph_str+'.csv'
+out_file = 'gephi/'+graph_str+'.csv'
 
 if os.path.isfile(out_file):
     os.remove(out_file)

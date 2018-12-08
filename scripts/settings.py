@@ -56,9 +56,9 @@ post_connection_threshold = 1 # haven't tried changing this yet
 connect_via_comment = True
 comment_connection_threshold = 1 # haven't tried changing this yet
 
-fold_connection_threshold = 3
-should_deconvolve = True
-remove_trolls = False
+fold_connection_threshold = 5
+should_deconvolve = False
+remove_trolls = True
 show_networkx_deconvolved = False
 
 comments_csv = 'data/'+year+'_comments_'+str(comments_cap)+'capped.csv'
