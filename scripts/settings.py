@@ -70,7 +70,7 @@ posts_str = 'posts' if connect_via_post else ''
 comments_str = 'comments' if connect_via_comment else ''
 deconvolved_str = 'deconvolved' if should_deconvolve else ''
 comments_cap_str = str(comments_cap)+'CommentCap' if connect_via_comment else ''
-posts_cap_str = str(posts_cap)+'PostCap' if connect_via_comment else ''
+posts_cap_str = str(posts_cap)+'PostCap' if connect_via_post else ''
 
 # TODO add whether or not trolls are considered
 graph_str = 'graphs/'+year+'-'+str(fold_connection_threshold)+posts_str+comments_str+'-'+comments_cap_str+'-'+posts_cap_str+'-'+deconvolved_str

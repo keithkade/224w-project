@@ -26,6 +26,7 @@ from sklearn.cluster import KMeans
 from matplotlib import colors
 from subreddits import subreddits
 import snap
+from settings import graph_str, remove_trolls
 
 weighted = False
 directed = False
@@ -35,21 +36,25 @@ num_walks = 10
 window_size = 10
 workers = 8
 no_iter = 1
-graph_input = "graphs/bipartite_connected_by_comment_folded_edgelist.txt"
+folded_grph_str = graph_str+'.txt'
+
+if remove_trolls:
+    folded_grph_str = graph_str+'_without_trolls.txt'
+    graph_str = graph_str + "_without_trolls"
 
 # Keep the node id to name map
 node_id_to_info = {}
 for subreddit in subreddits:
     node_id_to_info[subreddit.Index] = {'type': 'subreddit', 'id': subreddit.base36_id, 'name': subreddit.name }
 
-def read_graph():
+def read_graph(folded_grph_str):
 	'''
 	Reads the input network in networkx.
 	'''
 	if weighted:
-		G = nx.read_edgelist(graph_input, nodetype=int, data=(('weight',float),), create_using=nx.DiGraph())
+		G = nx.read_edgelist(folded_grph_str, nodetype=int, data=(('weight',float),), create_using=nx.DiGraph())
 	else:
-		G = nx.read_edgelist(graph_input, nodetype=int, create_using=nx.DiGraph())
+		G = nx.read_edgelist(folded_grph_str, nodetype=int, create_using=nx.DiGraph())
 		for edge in G.edges():
 			G[edge[0]][edge[1]]['weight'] = 1
 
@@ -70,7 +75,7 @@ def learn_embeddings(walks):
 
 # For now, node2vec will actually be equivelant to the deepwalk model
 p, q = 1, 1
-nx_G = read_graph()
+nx_G = read_graph(folded_grph_str)
 # Keep only the largest connected component to run the node2vec model
 Gc = max(nx.connected_component_subgraphs(nx_G), key=len)
 G = Graph(Gc, directed, p, q)
@@ -123,7 +128,7 @@ for i in range(pca_Y.shape[0]):
     plt.text(x * (1 + 0.01), y * (1 + 0.01) , x_labels[i], fontsize=20)
 plt.xlim([pca_Y[:, 0].min()-0.1, pca_Y[:, 0].max()+0.1])
 plt.ylim([pca_Y[:, 1].min()-0.1, pca_Y[:, 1].max()+0.1])
-plt.savefig("/plots/pca_plot.png")
+plt.savefig("/plots/" + graph_str[7:] + "_pca_plot.png")
 plt.show()
 
 
@@ -137,5 +142,5 @@ for i in range(tsne_Y.shape[0]):
     plt.text(x * (1 + 0.01), y * (1 + 0.01) , x_labels[i], fontsize=20)
 plt.xlim([tsne_Y[:, 0].min()-0.1, tsne_Y[:, 0].max()+0.1])
 plt.ylim([tsne_Y[:, 1].min()-0.1, tsne_Y[:, 1].max()+0.1])
-# plt.savefig("/plots/tsne_plot.png")
+plt.savefig("/plots/" + graph_str[7:] + "_tsne_plot.png")
 plt.show()
