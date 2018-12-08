@@ -48,7 +48,7 @@ bipartite_graph_file = 'graphs/bipartite_graph.graph'
 raw_data_location = '/Users/kade/Desktop/reddit data/'
 year = '2017'
 comments_cap = 2000
-posts_cap = 1000
+posts_cap = 2000
 
 # variables in graph folding
 connect_via_post = False
