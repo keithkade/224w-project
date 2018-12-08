@@ -6,7 +6,12 @@ Created on Sat Nov 03 12:39:57 2018
 """
 
 # note: this file has 2,885,440 comments
-comments_file = '/Volumes/TIME/reddit data/RC_filtered.txt'
+comments_file = '/Users/kade/Desktop/reddit data/Posts_2017.txt'
+
+# comments 2016: 4229162
+# comments 2017: 2885440
+# posts 2016: 260807
+# posts 2017: 299170
 
 comment_count = 0
 

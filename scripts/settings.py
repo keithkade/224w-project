@@ -47,7 +47,7 @@ bipartite_graph_file = 'graphs/bipartite_graph.graph'
 # variables in data pre processing
 raw_data_location = '/Users/kade/Desktop/reddit data/'
 year = '2017'
-comments_cap = 1000
+comments_cap = 2000
 posts_cap = 1000
 
 # variables in graph folding
@@ -56,9 +56,10 @@ post_connection_threshold = 1 # haven't tried changing this yet
 connect_via_comment = True
 comment_connection_threshold = 1 # haven't tried changing this yet
 
-fold_connection_threshold = 5
+fold_connection_threshold = 3
 should_deconvolve = False
-remove_trolls = True
+just_trolls = True # if this is true, make remove trolls false
+remove_trolls = False
 show_networkx_deconvolved = False
 
 comments_csv = 'data/'+year+'_comments_'+str(comments_cap)+'capped.csv'
@@ -71,7 +72,12 @@ comments_str = 'comments' if connect_via_comment else ''
 deconvolved_str = 'deconvolved' if should_deconvolve else ''
 comments_cap_str = str(comments_cap)+'CommentCap' if connect_via_comment else ''
 posts_cap_str = str(posts_cap)+'PostCap' if connect_via_post else ''
-trolls_str = 'without_trolls' if remove_trolls else ''
+
+trolls_str = ''
+if remove_trolls:
+    trolls_str = 'without_trolls'
+elif just_trolls:
+    trolls_str = 'just-trolls'
 
 graph_str = 'graphs/'+year+'-'+str(fold_connection_threshold)+posts_str+comments_str+'-'+comments_cap_str+'-'+posts_cap_str+'-'+deconvolved_str+'_'+trolls_str
 trolls_csv = 'data/'+year+'_trolls.csv'
