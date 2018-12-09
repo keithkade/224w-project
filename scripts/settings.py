@@ -46,7 +46,7 @@ bipartite_graph_file = 'graphs/bipartite_graph.graph'
 
 # variables in data pre processing
 raw_data_location = '/data/'
-year = '2016'
+year = '2017'
 comments_cap = 1000
 posts_cap = 1000
 
@@ -56,7 +56,7 @@ post_connection_threshold = 1 # haven't tried changing this yet
 connect_via_comment = False
 comment_connection_threshold = 1 # haven't tried changing this yet
 
-fold_connection_threshold = 5
+fold_connection_threshold = 3
 should_deconvolve = False
 just_trolls = False # if this is true, make remove trolls false
 remove_trolls = True
@@ -66,6 +66,8 @@ compute_hits = False
 
 """
 Some scores for certain graphs
+
+# 2016 Comments Graphs
 
 GENERATED GRAPH: graphs/2016-3comments-1000CommentCap--_just-trolls
 =============Metrics for rewired=============
@@ -103,6 +105,32 @@ Completeness: 0.643993886322
 Difference: 0.112620585031
 
 
+# 2017 Comments Graphs
+
+GENERATED GRAPH: graphs/2017-3comments-1000CommentCap--_just-trolls
+=============Metrics for rewired=============
+Completeness: 0.4771452672653972
+=============Metrics for generated=============
+Completeness: 0.5149699767515289
+Difference: 0.0378247094861317
+
+
+GENERATED GRAPH: graphs/2017-3comments-1000CommentCap--_
+=============Metrics for rewired=============
+Completeness: 0.3685784565589091
+=============Metrics for generated=============
+Completeness: 0.4282082163251678
+Difference: 0.05962975976625873
+
+GENERATED GRAPH: graphs/2017-3comments-1000CommentCap--_without-trolls
+=============Metrics for rewired=============
+Completeness: 0.3094541898124993
+=============Metrics for generated=============
+Completeness: 0.41354480951718786
+Difference: 0.10409061970468858
+
+
+# 2016 Posts Graphs
 
 GENERATED GRAPH: graphs/2016-1posts--1000PostCap-_just-trolls
 =============Metrics for rewired=============
@@ -124,6 +152,53 @@ Completeness: 0.30531334918739417
 =============Metrics for generated=============
 Completeness: 0.49868548481142017
 Difference: 0.193372135624026
+
+
+
+
+# 2017 Posts Graphs
+
+GENERATED GRAPH: graphs/2017-1posts--1000PostCap-_just-trolls
+=============Metrics for rewired=============
+Completeness: 0.28553651008971387
+=============Metrics for generated=============
+Completeness: 0.5099984575278717
+Difference: 0.2244619474381577
+
+GENERATED GRAPH: graphs/2017-3posts--1000PostCap-_just-trolls
+=============Metrics for rewired=============
+Completeness: 0.36754097063379637
+=============Metrics for generated=============
+Completeness: 0.7414616484201303
+Difference: 0.3739206777863339
+
+GENERATED GRAPH: graphs/2016-5posts--1000PostCap-_
+=============Metrics for rewired=============
+Completeness: 0.2702376855879936
+=============Metrics for generated=============
+Completeness: 0.5484667965960698
+Difference: 0.2782291110080762
+
+GENERATED GRAPH: graphs/2016-3posts--1000PostCap-_
+=============Metrics for rewired=============
+Completeness: 0.26609818779501404
+=============Metrics for generated=============
+Completeness: .5062175596849011
+Difference: 0.24011937188988708
+
+GENERATED GRAPH: graphs/2016-5posts--1000PostCap-_without_trolls
+=============Metrics for rewired=============
+Completeness: 0.30531334918739417
+=============Metrics for generated=============
+Completeness: 0.49868548481142017
+Difference: 0.193372135624026
+
+GENERATED GRAPH: graphs/2016-3posts--1000PostCap-_without_trolls
+=============Metrics for rewired=============
+Completeness: 0.344233255658219
+=============Metrics for generated=============
+Completeness: 0.45697475570624485
+Difference: 0.11274150004802586
 
 """
 

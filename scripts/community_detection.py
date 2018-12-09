@@ -5,6 +5,9 @@ Created on Sat Dec  8 17:35:32 2018
 @author: fade7001
 """
 
+import sys
+sys.path.append('scripts/')
+
 import sklearn.metrics as metrics
 from settings import graph_str, remove_trolls, plot_str, subreddit_to_category, compute_communities, compute_hits
 import community
