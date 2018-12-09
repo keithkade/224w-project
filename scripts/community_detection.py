@@ -5,18 +5,14 @@ Created on Sat Dec  8 17:35:32 2018
 @author: fade7001
 """
 
-from settings import graph_str, remove_trolls, plot_str
+import sklearn.metrics as metrics
+from settings import graph_str, remove_trolls, plot_str, subreddit_to_category
 import community
 import networkx as nx
 import matplotlib.pyplot as plt
 from subreddits import subreddits
 
-if remove_trolls:
-    folded_grph_str = graph_str+'_without_trolls.txt'
-    graph_str = graph_str + "_without_trolls"
-    plot_str = plot_str + "_without_trolls"
-else:
-    folded_grph_str = graph_str+'.txt'
+folded_grph_str = graph_str+'.txt'
 
 weighted = False
 directed = False
@@ -56,7 +52,7 @@ subreddit_count = len(subreddits)
 for subreddit in subreddits:
     node_id_to_info[subreddit.Index] = { 'type': 'subreddit', 'id': subreddit.base36_id, 'name': subreddit.name }
 
-# Get the labels for the plot 
+# Get the labels for the plot
 labels = {}
 for node in nx_G.nodes():
     labels[node] = node_id_to_info[node]['name']
@@ -78,21 +74,21 @@ nx.draw_networkx_labels(nx_G,label_pos,labels,font_size=16,font_color='r')
 # nx.draw_networkx_labels(nx_G,label_pos,font_size=16,font_color='r')
 nx.draw_networkx_edges(nx_G, pos, alpha=0.5)
 plt.savefig(plot_str+"._louvain.png", format="PNG")
-plt.show()
+# plt.show()
 
 
 
 # hubs, authorities
-import operator 
+import operator
 
 hubs, authorities = nx.hits(nx_G)
 top5_hubs = dict(sorted(hubs.iteritems(), key=operator.itemgetter(1), reverse=True)[:5])
 top5_authorities = dict(sorted(authorities.iteritems(), key=operator.itemgetter(1), reverse=True)[:5])
 
-hub_labels = {}    
+hub_labels = {}
 for node in nx_G.nodes():
     if node in top5_hubs:
-        #set the node name as the key and the label as its value 
+        #set the node name as the key and the label as its value
         hub_labels[node] = labels[node]
 pos = nx.spring_layout(nx_G)
 label_pos = {key: val + 0.01 for key, val in pos.items()}
@@ -103,10 +99,10 @@ nx.draw_networkx_labels(nx_G,label_pos,hub_labels,font_size=16,font_color='r')
 plt.savefig(plot_str+"_important_hubs.png", format="PNG")
 
 
-authorities_labels = {}    
+authorities_labels = {}
 for node in nx_G.nodes():
     if node in top5_authorities:
-        #set the node name as the key and the label as its value 
+        #set the node name as the key and the label as its value
         authorities_labels[node] = labels[node]
 pos = nx.spring_layout(nx_G)
 label_pos = {key: val + 0.01 for key, val in pos.items()}
@@ -114,3 +110,26 @@ label_pos = {key: val + 0.01 for key, val in pos.items()}
 nx.draw(nx_G, pos, with_labels=False, node_color = 'g')
 #Now only add labels to the nodes you require (the hubs in my case)
 nx.draw_networkx_labels(nx_G,label_pos,authorities_labels,font_size=16,font_color='r')
+
+
+sub_to_detected_communities = {}
+for key in partition:
+	sub_to_detected_communities[labels[key]] = partition[key]
+
+sub_to_ground_truth = {}
+for sub in subreddit_to_category:
+	if sub in sub_to_detected_communities:
+		sub_to_ground_truth[sub] = subreddit_to_category[sub]
+
+detected_arr = []
+for sub in sorted(sub_to_detected_communities.keys()):
+	detected_arr.append(sub_to_detected_communities[sub])
+
+ground_truth_arr = []
+for sub in sorted(sub_to_ground_truth.keys()):
+	ground_truth_arr.append(sub_to_ground_truth[sub])
+
+print metrics.adjusted_rand_score(ground_truth_arr, detected_arr)
+print metrics.completeness_score(ground_truth_arr, detected_arr)
+print metrics.homogeneity_score(ground_truth_arr, detected_arr)
+print metrics.fowlkes_mallows_score(ground_truth_arr, detected_arr)

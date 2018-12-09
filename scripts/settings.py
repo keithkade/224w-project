@@ -81,7 +81,7 @@ elif just_trolls:
 
 graph_str = 'graphs/'+year+'-'+str(fold_connection_threshold)+posts_str+comments_str+'-'+comments_cap_str+'-'+posts_cap_str+'-'+deconvolved_str+'_'+trolls_str
 trolls_csv = 'data/'+year+'_trolls.csv'
-plot_str = 'plots/'+year+'-'+str(fold_connection_threshold)+posts_str+comments_str+'-'+comments_cap_str+'-'+posts_cap_str+'-'+deconvolved_str
+plot_str = 'plots/'+year+'-'+str(fold_connection_threshold)+posts_str+comments_str+'-'+comments_cap_str+'-'+posts_cap_str+'-'+deconvolved_str+'_'+trolls_str
 
 # white list generate with the following JS
 # JSON.stringify(Array.from(document.getElementsByClassName('wiki')[0].getElementsByTagName('a')).map(x => x.href).filter(href => href.includes('/r/')).map(href => href.substring(href.indexOf('/r/')+3, href.length)).filter(href => !(href.includes('/') || href.includes('+'))))
@@ -129,7 +129,8 @@ whitelist = set(["BenCarson","ChrisChristie","TedCruz","Carly_Fiorina","Jindal",
 "Worldnews","WorldPoliticalHumour","Worldpolitics","Austrian_Economics","Business",
 "Economics","InternationalBusiness"])
 
-subreddit_categories = {
+# from the /r/politics related subreddit lists
+categories_to_subreddit = {
     "republicans_candidates": set(["BenCarson","ChrisChristie","TedCruz","Carly_Fiorina","Jindal","KasichForPresident","RandPaul","Marco_Rubio","RickSantorum","AskTrumpSupporters","The_Donald"]),
     "democratic_candidates": set(["HillaryClinton","HillaryForAmerica","MartinOMalley","SandersForPresident"]),
     "third_party_candidates": set(["GaryJohnson","JillStein","mcmullin"]),
@@ -150,3 +151,10 @@ subreddit_categories = {
     "international_politics": set(["CanadaPolitics","GeoPolitics","InternationalBusiness","InternationalPolitics","IRStudies","StrictlyWorldPolitics","SocialCitizens","UKPolitics","WorldEvents","Worldnews","WorldPoliticalHumour","Worldpolitics"]),
     "economics": set(["Austrian_Economics","Business","Economics","InternationalBusiness"]),
 }
+
+subreddit_to_category = {}
+i = 0
+for cat in categories_to_subreddit:
+    i += 1
+    for sub in categories_to_subreddit[cat]:
+        subreddit_to_category[sub] = i
