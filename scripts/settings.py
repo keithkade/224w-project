@@ -59,8 +59,9 @@ comment_connection_threshold = 1 # haven't tried changing this yet
 fold_connection_threshold = 5
 should_deconvolve = False
 just_trolls = False # if this is true, make remove trolls false
-remove_trolls = True
+remove_trolls = False
 show_networkx_deconvolved = False
+compute_communities = True
 
 comments_csv = 'data/'+year+'_comments_'+str(comments_cap)+'capped.csv'
 posts_csv = 'data/'+year+'_posts_'+str(posts_cap)+'capped.csv'
