@@ -77,25 +77,40 @@ for i, com in enumerate(set(partition.values())):
 nx.draw_networkx_labels(nx_G,label_pos,labels,font_size=16,font_color='r')
 # nx.draw_networkx_labels(nx_G,label_pos,font_size=16,font_color='r')
 nx.draw_networkx_edges(nx_G, pos, alpha=0.5)
-plt.savefig(plot_str+".png", format="PNG")
+plt.savefig(plot_str+"._louvain.png", format="PNG")
 plt.show()
 
 
-colors = ["blue", "red", "black", "yellow", "green", "orange"]
-size = float(len(set(partition.values())))
+
+# hubs, authorities
+import operator 
+
+hubs, authorities = nx.hits(nx_G)
+top5_hubs = dict(sorted(hubs.iteritems(), key=operator.itemgetter(1), reverse=True)[:5])
+top5_authorities = dict(sorted(authorities.iteritems(), key=operator.itemgetter(1), reverse=True)[:5])
+
+hub_labels = {}    
+for node in nx_G.nodes():
+    if node in top5_hubs:
+        #set the node name as the key and the label as its value 
+        hub_labels[node] = labels[node]
 pos = nx.spring_layout(nx_G)
 label_pos = {key: val + 0.01 for key, val in pos.items()}
-count = 0.
-for i, com in enumerate(set(partition.values())):
-    count = count + 1.
-    list_nodes = [nodes for nodes in partition.keys()
-                                if partition[nodes] == com]
-    nx.draw_networkx_nodes(nx_G, pos, list_nodes, node_size = 100,
-                                node_color = colors[i])
+#set the argument 'with labels' to False so you have unlabeled graph
+nx.draw(nx_G, pos, with_labels=False, node_color = 'g')
+#Now only add labels to the nodes you require (the hubs in my case)
+nx.draw_networkx_labels(nx_G,label_pos,hub_labels,font_size=16,font_color='r')
+plt.savefig(plot_str+"_important_hubs.png", format="PNG")
 
-nx.draw_networkx_labels(nx_G,label_pos,labels,font_size=16,font_color='r')
-# nx.draw_networkx_labels(nx_G,label_pos,font_size=16,font_color='r')
-nx.draw_networkx_edges(nx_G, pos, alpha=0.5)
-plt.savefig('D:\\Docs\\Stanford - Mining Massive Datasets\\CS224w\\Project\\final_project\\224w-project\\plots\\2017-3comments-1000CommentCap--deconvolvedwithout_trolls.png', format="PNG")
-plt.show()
 
+authorities_labels = {}    
+for node in nx_G.nodes():
+    if node in top5_authorities:
+        #set the node name as the key and the label as its value 
+        authorities_labels[node] = labels[node]
+pos = nx.spring_layout(nx_G)
+label_pos = {key: val + 0.01 for key, val in pos.items()}
+#set the argument 'with labels' to False so you have unlabeled graph
+nx.draw(nx_G, pos, with_labels=False, node_color = 'g')
+#Now only add labels to the nodes you require (the hubs in my case)
+nx.draw_networkx_labels(nx_G,label_pos,authorities_labels,font_size=16,font_color='r')
