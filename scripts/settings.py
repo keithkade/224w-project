@@ -56,12 +56,52 @@ post_connection_threshold = 1 # haven't tried changing this yet
 connect_via_comment = True
 comment_connection_threshold = 1 # haven't tried changing this yet
 
-fold_connection_threshold = 5
+fold_connection_threshold = 3
 should_deconvolve = False
-just_trolls = False # if this is true, make remove trolls false
+just_trolls = True # if this is true, make remove trolls false
 remove_trolls = False
 show_networkx_deconvolved = False
 compute_communities = True
+compute_hits = False
+
+"""
+Some scores for certain graphs
+
+GENERATED GRAPH: graphs/2016-3comments-1000CommentCap--_just-trolls
+=============Metrics for rewired=============
+Completeness: 0.369070246429
+=============Metrics for generated=============
+Completeness: 0.579380164286
+Difference: 0.210309917857
+
+GENERATED GRAPH: graphs/2016-5comments-1000CommentCap--_
+=============Metrics for rewired=============
+Completeness: 0.242966121584
+=============Metrics for generated=============
+Completeness: 0.521165499398
+Difference: 0.278199377814
+
+GENERATED GRAPH: graphs/2016-5comments-1000CommentCap--_without_trolls
+=============Metrics for rewired=============
+Completeness: 0.353493683379
+=============Metrics for generated=============
+Completeness: 0.652223699671
+Difference: 0.298730016292
+
+GENERATED GRAPH: graphs/2016-5comments-1000CommentCap--deconvolved_
+=============Metrics for rewired=============
+Completeness: 0.526215201148
+=============Metrics for generated=============
+Completeness: 0.643298377467
+Difference: 0.117083176319
+
+GENERATED GRAPH: graphs/2016-5comments-1000CommentCap--deconvolved_without_trolls
+=============Metrics for rewired=============
+Completeness: 0.531373301291
+=============Metrics for generated=============
+Completeness: 0.643993886322
+Difference: 0.112620585031
+"""
 
 comments_csv = 'data/'+year+'_comments_'+str(comments_cap)+'capped.csv'
 posts_csv = 'data/'+year+'_posts_'+str(posts_cap)+'capped.csv'

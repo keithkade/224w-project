@@ -1,0 +1,6 @@
+# Undirected graph (each unordered pair of nodes is saved once): graphs/2016-3comments-1000CommentCap--_just-trolls.txt
+# Nodes: 1067467 Edges: 3
+# NodeId	NodeId
+34	111687
+5199	9860
+65726	129293

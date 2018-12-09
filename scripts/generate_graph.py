@@ -9,7 +9,7 @@ if should_deconvolve:
 
 import convert_to_gephi
 
+print "GENERATED GRAPH: " + graph_str
+
 if compute_communities:
     import community_detection
-
-print graph_str

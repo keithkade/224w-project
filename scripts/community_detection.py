@@ -6,7 +6,7 @@ Created on Sat Dec  8 17:35:32 2018
 """
 
 import sklearn.metrics as metrics
-from settings import graph_str, remove_trolls, plot_str, subreddit_to_category, compute_communities
+from settings import graph_str, remove_trolls, plot_str, subreddit_to_category, compute_communities, compute_hits
 import community
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -84,40 +84,39 @@ plt.savefig(plot_str+"._louvain.png", format="PNG", dpi=500)
 # plt.show()
 
 
+if compute_hits:
+	# hubs, authorities
+	import operator
 
-# hubs, authorities
-import operator
+	hubs, authorities = nx.hits(nx_G)
+	top5_hubs = dict(sorted(hubs.iteritems(), key=operator.itemgetter(1), reverse=True)[:5])
+	top5_authorities = dict(sorted(authorities.iteritems(), key=operator.itemgetter(1), reverse=True)[:5])
 
-hubs, authorities = nx.hits(nx_G)
-top5_hubs = dict(sorted(hubs.iteritems(), key=operator.itemgetter(1), reverse=True)[:5])
-top5_authorities = dict(sorted(authorities.iteritems(), key=operator.itemgetter(1), reverse=True)[:5])
-
-hub_labels = {}
-for node in nx_G.nodes():
-    if node in top5_hubs:
-        #set the node name as the key and the label as its value
-        hub_labels[node] = labels[node]
-pos = nx.spring_layout(nx_G)
-label_pos = {key: val + 0.01 for key, val in pos.items()}
-#set the argument 'with labels' to False so you have unlabeled graph
-nx.draw(nx_G, pos, with_labels=False, node_color = 'g')
-#Now only add labels to the nodes you require (the hubs in my case)
-nx.draw_networkx_labels(nx_G,label_pos,hub_labels,font_size=12,font_color='r')
-plt.savefig(plot_str+"_important_hubs.png", format="PNG")
+	hub_labels = {}
+	for node in nx_G.nodes():
+	    if node in top5_hubs:
+	        #set the node name as the key and the label as its value
+	        hub_labels[node] = labels[node]
+	pos = nx.spring_layout(nx_G)
+	label_pos = {key: val + 0.01 for key, val in pos.items()}
+	#set the argument 'with labels' to False so you have unlabeled graph
+	nx.draw(nx_G, pos, with_labels=False, node_color = 'g')
+	#Now only add labels to the nodes you require (the hubs in my case)
+	nx.draw_networkx_labels(nx_G,label_pos,hub_labels,font_size=12,font_color='r')
+	plt.savefig(plot_str+"_important_hubs.png", format="PNG")
 
 
-authorities_labels = {}
-for node in nx_G.nodes():
-    if node in top5_authorities:
-        #set the node name as the key and the label as its value
-        authorities_labels[node] = labels[node]
-pos = nx.spring_layout(nx_G)
-label_pos = {key: val + 0.01 for key, val in pos.items()}
-#set the argument 'with labels' to False so you have unlabeled graph
-nx.draw(nx_G, pos, with_labels=False, node_color = 'g')
-#Now only add labels to the nodes you require (the hubs in my case)
-nx.draw_networkx_labels(nx_G,label_pos,authorities_labels,font_size=16,font_color='r')
-
+	authorities_labels = {}
+	for node in nx_G.nodes():
+	    if node in top5_authorities:
+	        #set the node name as the key and the label as its value
+	        authorities_labels[node] = labels[node]
+	pos = nx.spring_layout(nx_G)
+	label_pos = {key: val + 0.01 for key, val in pos.items()}
+	#set the argument 'with labels' to False so you have unlabeled graph
+	nx.draw(nx_G, pos, with_labels=False, node_color = 'g')
+	#Now only add labels to the nodes you require (the hubs in my case)
+	nx.draw_networkx_labels(nx_G,label_pos,authorities_labels,font_size=16,font_color='r')
 
 def get_metrics(partition):
 	sub_to_detected_communities = {}
@@ -137,12 +136,17 @@ def get_metrics(partition):
 	for sub in sorted(sub_to_ground_truth.keys()):
 		ground_truth_arr.append(sub_to_ground_truth[sub])
 
-	print 'Rand: ' + str(metrics.adjusted_rand_score(ground_truth_arr, detected_arr))
-	print 'Completeness: ' + str(metrics.completeness_score(ground_truth_arr, detected_arr))
-	print 'Homogeneity: ' + str(metrics.homogeneity_score(ground_truth_arr, detected_arr))
-	print 'Fowlkes Mallows: ' + str(metrics.fowlkes_mallows_score(ground_truth_arr, detected_arr))
+	# print 'Rand: ' + str(metrics.adjusted_rand_score(ground_truth_arr, detected_arr))
+	return metrics.completeness_score(ground_truth_arr, detected_arr)
+	# print 'Homogeneity: ' + str(metrics.homogeneity_score(ground_truth_arr, detected_arr))
+	# print 'Fowlkes Mallows: ' + str(metrics.fowlkes_mallows_score(ground_truth_arr, detected_arr))
 
 print '=============Metrics for rewired============='
-get_metrics(rewired_partition)
-print '=============Metrics for original============='
-get_metrics(partition)
+score1 = get_metrics(rewired_partition)
+print 'Completeness: ' + str(score1)
+
+print '=============Metrics for generated============='
+score2 = get_metrics(partition)
+print 'Completeness: ' + str(score2)
+
+print 'Difference: ' + str(score2 - score1)
