@@ -65,7 +65,7 @@ for node in nx_G.nodes():
     labels[node] = node_id_to_info[node]['name']
 
 #drawing
-colors = ["blue", "red", "black", "yellow", "green", "orange"]
+colors = ["blue", "red", "black", "yellow", "green", "orange", "brown"]
 size = float(len(set(partition.values())))
 pos = nx.spring_layout(nx_G, k=0.2)
 label_pos = {key: val + 0.01 for key, val in pos.items()}

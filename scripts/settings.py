@@ -45,21 +45,21 @@ subreddits_csv = 'data/subreddits.csv'
 bipartite_graph_file = 'graphs/bipartite_graph.graph'
 
 # variables in data pre processing
-raw_data_location = '/Users/kade/Desktop/reddit data/'
+raw_data_location = '/data/'
 year = '2016'
 comments_cap = 1000
 posts_cap = 1000
 
 # variables in graph folding
-connect_via_post = False
+connect_via_post = True
 post_connection_threshold = 1 # haven't tried changing this yet
-connect_via_comment = True
+connect_via_comment = False
 comment_connection_threshold = 1 # haven't tried changing this yet
 
-fold_connection_threshold = 3
+fold_connection_threshold = 5
 should_deconvolve = False
-just_trolls = True # if this is true, make remove trolls false
-remove_trolls = False
+just_trolls = False # if this is true, make remove trolls false
+remove_trolls = True
 show_networkx_deconvolved = False
 compute_communities = True
 compute_hits = False
@@ -101,6 +101,30 @@ Completeness: 0.531373301291
 =============Metrics for generated=============
 Completeness: 0.643993886322
 Difference: 0.112620585031
+
+
+
+GENERATED GRAPH: graphs/2016-1posts--1000PostCap-_just-trolls
+=============Metrics for rewired=============
+Completeness: 0.49022687927546366
+=============Metrics for generated=============
+Completeness: 0.6262057184876308
+Difference: 0.1359788392121672
+
+GENERATED GRAPH: graphs/2016-5posts--1000PostCap-_
+=============Metrics for rewired=============
+Completeness: 0.36869124459668073
+=============Metrics for generated=============
+Completeness: 0.5544329460997891
+Difference: 0.18574170150310837
+
+GENERATED GRAPH: graphs/2016-5posts--1000PostCap-_without_trolls
+=============Metrics for rewired=============
+Completeness: 0.30531334918739417
+=============Metrics for generated=============
+Completeness: 0.49868548481142017
+Difference: 0.193372135624026
+
 """
 
 comments_csv = 'data/'+year+'_comments_'+str(comments_cap)+'capped.csv'
