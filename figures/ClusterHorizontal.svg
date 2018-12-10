@@ -4,7 +4,7 @@
 <svg contentScriptType="text/ecmascript" width="835.0"
      xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify"
      contentStyleType="text/css"
-     viewBox="-477.000000 -313.000000 835.000000 517.000000" height="517.0"
+     viewBox="-477.000000 -227.000000 835.000000 431.000000" height="431.0"
      preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"
      version="1.1">
     <g id="edges">
@@ -497,11 +497,11 @@
               class="id_Agorism id_voluntarism" stroke-opacity="1.0"
               stroke="#c686e9"/>
         <path fill="none" stroke-width="1.0"
-              d="M -78.135742,-234.256668 L -41.949429,-55.275669"
+              d="M -43.462070,-189.869675 L -41.949429,-55.275669"
               class="id_censorship id_EndlessWar" stroke-opacity="1.0"
               stroke="#af914a"/>
         <path fill="none" stroke-width="1.0"
-              d="M -78.135742,-234.256668 L -88.785698,-285.502991"
+              d="M -43.462070,-189.869675 L -44.403400,-216.148315"
               class="id_censorship id_PoliticalModeration" stroke-opacity="1.0"
               stroke="#ff5c81"/>
         <path fill="none" stroke-width="1.0"
@@ -649,7 +649,7 @@
               class="id_POLITIC id_2016_elections" stroke-opacity="1.0"
               stroke="#5fc613"/>
         <path fill="none" stroke-width="1.0"
-              d="M 223.297882,-276.250671 L 186.724808,-302.772583"
+              d="M -417.471436,-118.122025 L -417.983917,-155.740707"
               class="id_new_right id_paleoconservative" stroke-opacity="1.0"
               stroke="#2e9072"/>
         <path fill="none" stroke-width="1.0"
@@ -1066,11 +1066,11 @@
         <circle fill-opacity="1.0" fill="#c686e9" r="10.0" cx="-466.31998"
                 class="id_voluntarism" cy="105.3" stroke="#000000"
                 stroke-opacity="1.0" stroke-width="1.0"/>
-        <circle fill-opacity="1.0" fill="#ff5c81" r="10.0" cx="-78.13574"
-                class="id_censorship" cy="-234.25667" stroke="#000000"
+        <circle fill-opacity="1.0" fill="#ff5c81" r="10.0" cx="-43.46207"
+                class="id_censorship" cy="-189.86967" stroke="#000000"
                 stroke-opacity="1.0" stroke-width="1.0"/>
-        <circle fill-opacity="1.0" fill="#ff5c81" r="10.0" cx="-88.7857"
-                class="id_PoliticalModeration" cy="-285.503" stroke="#000000"
+        <circle fill-opacity="1.0" fill="#ff5c81" r="10.0" cx="-44.4034"
+                class="id_PoliticalModeration" cy="-216.14832" stroke="#000000"
                 stroke-opacity="1.0" stroke-width="1.0"/>
         <circle fill-opacity="1.0" fill="#ea8615" r="10.0" cx="202.79161"
                 class="id_centrist" cy="162.19147" stroke="#000000"
@@ -1081,11 +1081,11 @@
         <circle fill-opacity="1.0" fill="#00caff" r="10.0" cx="259.0001"
                 class="id_AskTrumpSupporters" cy="-125.621956" stroke="#000000"
                 stroke-opacity="1.0" stroke-width="1.0"/>
-        <circle fill-opacity="1.0" fill="#2e9072" r="10.0" cx="223.29788"
-                class="id_new_right" cy="-276.25067" stroke="#000000"
+        <circle fill-opacity="1.0" fill="#2e9072" r="10.0" cx="-417.47144"
+                class="id_new_right" cy="-118.122025" stroke="#000000"
                 stroke-opacity="1.0" stroke-width="1.0"/>
-        <circle fill-opacity="1.0" fill="#2e9072" r="10.0" cx="186.72481"
-                class="id_paleoconservative" cy="-302.77258" stroke="#000000"
+        <circle fill-opacity="1.0" fill="#2e9072" r="10.0" cx="-417.98392"
+                class="id_paleoconservative" cy="-155.7407" stroke="#000000"
                 stroke-opacity="1.0" stroke-width="1.0"/>
         <circle fill-opacity="1.0" fill="#ea8615" r="10.0" cx="242.83936"
                 class="id_TruePolitics" cy="109.81277" stroke="#000000"
@@ -1335,12 +1335,12 @@
               font-family="Arial" class="id_voluntarism">
             voluntarism
         </text>
-        <text font-size="12" x="-78.13574" y="-231.51302" fill="#000000"
+        <text font-size="12" x="-43.46207" y="-187.12602" fill="#000000"
               style="text-anchor: middle; dominant-baseline: central;"
               font-family="Arial" class="id_censorship">
             censorship
         </text>
-        <text font-size="12" x="-88.7857" y="-283.32037" fill="#000000"
+        <text font-size="12" x="-44.4034" y="-213.9657" fill="#000000"
               style="text-anchor: middle; dominant-baseline: central;"
               font-family="Arial" class="id_PoliticalModeration">
             PoliticalModeration
@@ -1360,12 +1360,12 @@
               font-family="Arial" class="id_AskTrumpSupporters">
             AskTrumpSupporters
         </text>
-        <text font-size="12" x="223.29788" y="-273.47186" fill="#000000"
+        <text font-size="12" x="-417.47144" y="-115.343216" fill="#000000"
               style="text-anchor: middle; dominant-baseline: central;"
               font-family="Arial" class="id_new_right">
             new_right
         </text>
-        <text font-size="12" x="186.72481" y="-300.02893" fill="#000000"
+        <text font-size="12" x="-417.98392" y="-152.99706" fill="#000000"
               style="text-anchor: middle; dominant-baseline: central;"
               font-family="Arial" class="id_paleoconservative">
             paleoconservative
