@@ -1,0 +1,1384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg contentScriptType="text/ecmascript" width="588.0"
+     xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify"
+     contentStyleType="text/css"
+     viewBox="-323.000000 -327.000000 588.000000 762.000000" height="762.0"
+     preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"
+     version="1.1">
+    <g id="edges">
+        <path fill="none" stroke-width="1.0"
+              d="M 17.751936,-61.249405 L -58.455017,114.332550"
+              class="id_obama id_Green" stroke-opacity="1.0" stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 17.751936,-61.249405 L -22.162909,-37.591457"
+              class="id_obama id_AmericanPolitics" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 17.751936,-61.249405 L -30.158867,40.909916"
+              class="id_obama id_progressive" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 17.751936,-61.249405 L 79.363686,-26.121511"
+              class="id_obama id_PoliticalHumor" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 17.751936,-61.249405 L 23.639370,-14.965897"
+              class="id_obama id_democrats" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 17.751936,-61.249405 L 117.116112,65.891869"
+              class="id_obama id_Bad_Cop_No_Donut" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 17.751936,-61.249405 L 45.926830,-145.380615"
+              class="id_obama id_republicans" stroke-opacity="1.0"
+              stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 17.751936,-61.249405 L -12.615075,7.852549"
+              class="id_obama id_POLITIC" stroke-opacity="1.0" stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 17.751936,-61.249405 L -68.924774,-3.367261"
+              class="id_obama id_EndlessWar" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 17.751936,-61.249405 L 130.895035,-132.735382"
+              class="id_obama id_PoliticalDiscussion" stroke-opacity="1.0"
+              stroke="#a4a614"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 17.751936,-61.249405 L 3.537597,-105.406769"
+              class="id_obama id_2016_elections" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 147.334290,10.618342 L 186.018127,-18.804018"
+              class="id_ronpaul id_GaryJohnson" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 147.334290,10.618342 L -68.924774,-3.367261"
+              class="id_ronpaul id_EndlessWar" stroke-opacity="1.0"
+              stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 147.334290,10.618342 L 146.974030,-40.632179"
+              class="id_ronpaul id_moderatepolitics" stroke-opacity="1.0"
+              stroke="#75a88a"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 147.334290,10.618342 L 26.310434,98.930145"
+              class="id_ronpaul id_AnythingGoesNews" stroke-opacity="1.0"
+              stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 147.334290,10.618342 L 75.518379,-1.875850"
+              class="id_ronpaul id_libertarianmeme" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 147.334290,10.618342 L 224.681198,22.954981"
+              class="id_ronpaul id_LibertarianDebates" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 147.334290,10.618342 L 3.537597,-105.406769"
+              class="id_ronpaul id_2016_elections" stroke-opacity="1.0"
+              stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 145.547913,-113.181763 L 149.422119,-210.384216"
+              class="id_Economics id_Conservative" stroke-opacity="1.0"
+              stroke="#75a88a"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 145.547913,-113.181763 L 146.974030,-40.632179"
+              class="id_Economics id_moderatepolitics" stroke-opacity="1.0"
+              stroke="#ea8615"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 145.547913,-113.181763 L 130.895035,-132.735382"
+              class="id_Economics id_PoliticalDiscussion" stroke-opacity="1.0"
+              stroke="#ea8615"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 145.547913,-113.181763 L 137.165009,-76.477760"
+              class="id_Economics id_Ask_Politics" stroke-opacity="1.0"
+              stroke="#ea8615"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 145.547913,-113.181763 L 178.958099,-148.138138"
+              class="id_Economics id_NeutralPolitics" stroke-opacity="1.0"
+              stroke="#ea8615"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 145.547913,-113.181763 L -173.738602,131.833008"
+              class="id_Economics id_DebateCommunism" stroke-opacity="1.0"
+              stroke="#d8867f"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -109.902954,189.554367 L 7.392887,202.358231"
+              class="id_Anarchism id_privacy" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -109.902954,189.554367 L -169.246170,83.827034"
+              class="id_Anarchism id_socialism" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -109.902954,189.554367 L -30.158867,40.909916"
+              class="id_Anarchism id_progressive" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -109.902954,189.554367 L -190.933960,363.374268"
+              class="id_Anarchism id_Agorism" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -109.902954,189.554367 L -216.988617,117.662010"
+              class="id_Anarchism id_communism" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -109.902954,189.554367 L -158.479065,200.809967"
+              class="id_Anarchism id_LibertarianLeft" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -109.902954,189.554367 L -144.466507,172.508362"
+              class="id_Anarchism id_IWW" stroke-opacity="1.0" stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -109.902954,189.554367 L -115.292603,271.825714"
+              class="id_Anarchism id_HackBloc" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -109.902954,189.554367 L -218.717178,213.200897"
+              class="id_Anarchism id_Anarchy101" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -109.902954,189.554367 L -125.661903,99.586617"
+              class="id_Anarchism id_alltheleft" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -109.902954,189.554367 L -152.519180,15.240602"
+              class="id_Anarchism id_SocialDemocracy" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -109.902954,189.554367 L -137.975052,226.773575"
+              class="id_Anarchism id_Green_Anarchism" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -109.902954,189.554367 L 75.518379,-1.875850"
+              class="id_Anarchism id_libertarianmeme" stroke-opacity="1.0"
+              stroke="#63a8f4"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -109.902954,189.554367 L 45.319611,129.195190"
+              class="id_Anarchism id_DescentIntoTyranny" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -109.902954,189.554367 L -173.738602,131.833008"
+              class="id_Anarchism id_DebateCommunism" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 149.422119,-210.384216 L 199.603958,-285.702667"
+              class="id_Conservative id_MensRights" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 149.422119,-210.384216 L 45.926830,-145.380615"
+              class="id_Conservative id_republicans" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 149.422119,-210.384216 L 130.895035,-132.735382"
+              class="id_Conservative id_PoliticalDiscussion"
+              stroke-opacity="1.0" stroke="#75a88a"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 149.422119,-210.384216 L 75.518379,-1.875850"
+              class="id_Conservative id_libertarianmeme" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 149.422119,-210.384216 L 105.327560,-195.025772"
+              class="id_Conservative id_TedCruz" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 149.422119,-210.384216 L 81.513161,-230.534836"
+              class="id_Conservative id_The_Donald" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -58.455017,114.332550 L -30.158867,40.909916"
+              class="id_Green id_progressive" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -58.455017,114.332550 L 79.363686,-26.121511"
+              class="id_Green id_PoliticalHumor" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -58.455017,114.332550 L -219.148300,154.146820"
+              class="id_Green id_LibertarianSocialism" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -58.455017,114.332550 L -68.924774,-3.367261"
+              class="id_Green id_EndlessWar" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -58.455017,114.332550 L -125.661903,99.586617"
+              class="id_Green id_alltheleft" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -58.455017,114.332550 L -137.975052,226.773575"
+              class="id_Green id_Green_Anarchism" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -58.455017,114.332550 L 26.310434,98.930145"
+              class="id_Green id_AnythingGoesNews" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -58.455017,114.332550 L 45.319611,129.195190"
+              class="id_Green id_DescentIntoTyranny" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 7.392887,202.358231 L -115.292603,271.825714"
+              class="id_privacy id_HackBloc" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 7.392887,202.358231 L 26.310434,98.930145"
+              class="id_privacy id_AnythingGoesNews" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 7.392887,202.358231 L 35.973385,53.319557"
+              class="id_privacy id_evolutionReddit" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 7.392887,202.358231 L 45.319611,129.195190"
+              class="id_privacy id_DescentIntoTyranny" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 7.392887,202.358231 L 93.167702,86.340820"
+              class="id_privacy id_restorethefourth" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -22.162909,-37.591457 L -30.158867,40.909916"
+              class="id_AmericanPolitics id_progressive" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -22.162909,-37.591457 L 79.363686,-26.121511"
+              class="id_AmericanPolitics id_PoliticalHumor" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -22.162909,-37.591457 L 23.639370,-14.965897"
+              class="id_AmericanPolitics id_democrats" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -22.162909,-37.591457 L 45.926830,-145.380615"
+              class="id_AmericanPolitics id_republicans" stroke-opacity="1.0"
+              stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -22.162909,-37.591457 L -12.615075,7.852549"
+              class="id_AmericanPolitics id_POLITIC" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -22.162909,-37.591457 L -68.924774,-3.367261"
+              class="id_AmericanPolitics id_EndlessWar" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -22.162909,-37.591457 L 146.974030,-40.632179"
+              class="id_AmericanPolitics id_moderatepolitics"
+              stroke-opacity="1.0" stroke="#a4a614"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -22.162909,-37.591457 L -125.661903,99.586617"
+              class="id_AmericanPolitics id_alltheleft" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -22.162909,-37.591457 L 26.310434,98.930145"
+              class="id_AmericanPolitics id_AnythingGoesNews"
+              stroke-opacity="1.0" stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -22.162909,-37.591457 L 45.319611,129.195190"
+              class="id_AmericanPolitics id_DescentIntoTyranny"
+              stroke-opacity="1.0" stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -22.162909,-37.591457 L 3.537597,-105.406769"
+              class="id_AmericanPolitics id_2016_elections" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -169.246170,83.827034 L -30.158867,40.909916"
+              class="id_socialism id_progressive" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -169.246170,83.827034 L -216.988617,117.662010"
+              class="id_socialism id_communism" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -169.246170,83.827034 L -219.148300,154.146820"
+              class="id_socialism id_LibertarianSocialism" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -169.246170,83.827034 L -144.466507,172.508362"
+              class="id_socialism id_IWW" stroke-opacity="1.0" stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -169.246170,83.827034 L -68.924774,-3.367261"
+              class="id_socialism id_EndlessWar" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -169.246170,83.827034 L -218.717178,213.200897"
+              class="id_socialism id_Anarchy101" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -169.246170,83.827034 L -125.661903,99.586617"
+              class="id_socialism id_alltheleft" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -169.246170,83.827034 L -152.519180,15.240602"
+              class="id_socialism id_SocialDemocracy" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -169.246170,83.827034 L 75.518379,-1.875850"
+              class="id_socialism id_libertarianmeme" stroke-opacity="1.0"
+              stroke="#63a8f4"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -169.246170,83.827034 L -173.738602,131.833008"
+              class="id_socialism id_DebateCommunism" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -169.246170,83.827034 L -61.362236,-117.936546"
+              class="id_socialism id_KasichForPresident" stroke-opacity="1.0"
+              stroke="#63a8f4"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -30.158867,40.909916 L 79.363686,-26.121511"
+              class="id_progressive id_PoliticalHumor" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -30.158867,40.909916 L 23.639370,-14.965897"
+              class="id_progressive id_democrats" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -30.158867,40.909916 L 117.116112,65.891869"
+              class="id_progressive id_Bad_Cop_No_Donut" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -30.158867,40.909916 L 45.926830,-145.380615"
+              class="id_progressive id_republicans" stroke-opacity="1.0"
+              stroke="#63a8f4"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -30.158867,40.909916 L -158.479065,200.809967"
+              class="id_progressive id_LibertarianLeft" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -30.158867,40.909916 L -12.615075,7.852549"
+              class="id_progressive id_POLITIC" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -30.158867,40.909916 L -144.466507,172.508362"
+              class="id_progressive id_IWW" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -30.158867,40.909916 L 178.205215,78.353714"
+              class="id_progressive id_Cascadia" stroke-opacity="1.0"
+              stroke="#d8867f"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -30.158867,40.909916 L 146.974030,-40.632179"
+              class="id_progressive id_moderatepolitics" stroke-opacity="1.0"
+              stroke="#d8867f"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -30.158867,40.909916 L 130.895035,-132.735382"
+              class="id_progressive id_PoliticalDiscussion" stroke-opacity="1.0"
+              stroke="#d8867f"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -30.158867,40.909916 L -125.661903,99.586617"
+              class="id_progressive id_alltheleft" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -30.158867,40.909916 L -152.519180,15.240602"
+              class="id_progressive id_SocialDemocracy" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -30.158867,40.909916 L -137.975052,226.773575"
+              class="id_progressive id_Green_Anarchism" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -30.158867,40.909916 L 137.165009,-76.477760"
+              class="id_progressive id_Ask_Politics" stroke-opacity="1.0"
+              stroke="#d8867f"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -30.158867,40.909916 L 26.310434,98.930145"
+              class="id_progressive id_AnythingGoesNews" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -30.158867,40.909916 L 75.518379,-1.875850"
+              class="id_progressive id_libertarianmeme" stroke-opacity="1.0"
+              stroke="#63a8f4"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -30.158867,40.909916 L 35.973385,53.319557"
+              class="id_progressive id_evolutionReddit" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -30.158867,40.909916 L 93.167702,86.340820"
+              class="id_progressive id_restorethefourth" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -30.158867,40.909916 L -8.200832,-161.977982"
+              class="id_progressive id_SandersForPresident" stroke-opacity="1.0"
+              stroke="#63a8f4"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -30.158867,40.909916 L 3.537597,-105.406769"
+              class="id_progressive id_2016_elections" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 79.363686,-26.121511 L 23.639370,-14.965897"
+              class="id_PoliticalHumor id_democrats" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 79.363686,-26.121511 L 117.116112,65.891869"
+              class="id_PoliticalHumor id_Bad_Cop_No_Donut" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 79.363686,-26.121511 L -12.615075,7.852549"
+              class="id_PoliticalHumor id_POLITIC" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 79.363686,-26.121511 L -68.924774,-3.367261"
+              class="id_PoliticalHumor id_EndlessWar" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 79.363686,-26.121511 L 146.974030,-40.632179"
+              class="id_PoliticalHumor id_moderatepolitics" stroke-opacity="1.0"
+              stroke="#a4a614"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 79.363686,-26.121511 L 130.895035,-132.735382"
+              class="id_PoliticalHumor id_PoliticalDiscussion"
+              stroke-opacity="1.0" stroke="#a4a614"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 79.363686,-26.121511 L 26.310434,98.930145"
+              class="id_PoliticalHumor id_AnythingGoesNews" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 79.363686,-26.121511 L 75.518379,-1.875850"
+              class="id_PoliticalHumor id_libertarianmeme" stroke-opacity="1.0"
+              stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 79.363686,-26.121511 L 178.958099,-148.138138"
+              class="id_PoliticalHumor id_NeutralPolitics" stroke-opacity="1.0"
+              stroke="#a4a614"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 23.639370,-14.965897 L 117.116112,65.891869"
+              class="id_democrats id_Bad_Cop_No_Donut" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 23.639370,-14.965897 L 107.557007,143.100266"
+              class="id_democrats id_greed" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 23.639370,-14.965897 L 45.926830,-145.380615"
+              class="id_democrats id_republicans" stroke-opacity="1.0"
+              stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 23.639370,-14.965897 L -12.615075,7.852549"
+              class="id_democrats id_POLITIC" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 23.639370,-14.965897 L -68.924774,-3.367261"
+              class="id_democrats id_EndlessWar" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 23.639370,-14.965897 L -125.661903,99.586617"
+              class="id_democrats id_alltheleft" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 23.639370,-14.965897 L 137.165009,-76.477760"
+              class="id_democrats id_Ask_Politics" stroke-opacity="1.0"
+              stroke="#a4a614"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 23.639370,-14.965897 L 26.310434,98.930145"
+              class="id_democrats id_AnythingGoesNews" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 23.639370,-14.965897 L 35.973385,53.319557"
+              class="id_democrats id_evolutionReddit" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 23.639370,-14.965897 L 93.167702,86.340820"
+              class="id_democrats id_restorethefourth" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 23.639370,-14.965897 L -70.787224,-149.068085"
+              class="id_democrats id_MartinOMalley" stroke-opacity="1.0"
+              stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 23.639370,-14.965897 L -8.200832,-161.977982"
+              class="id_democrats id_SandersForPresident" stroke-opacity="1.0"
+              stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 23.639370,-14.965897 L 3.537597,-105.406769"
+              class="id_democrats id_2016_elections" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -190.933960,363.374268 L -219.080200,424.907379"
+              class="id_Agorism id_voluntarism" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -246.829666,-102.418976 L -68.924774,-3.367261"
+              class="id_censorship id_EndlessWar" stroke-opacity="1.0"
+              stroke="#af914a"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -246.829666,-102.418976 L -312.996765,-138.643784"
+              class="id_censorship id_PoliticalModeration" stroke-opacity="1.0"
+              stroke="#ff5c81"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -216.988617,117.662010 L -219.148300,154.146820"
+              class="id_communism id_LibertarianSocialism" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -216.988617,117.662010 L -68.924774,-3.367261"
+              class="id_communism id_EndlessWar" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -216.988617,117.662010 L -218.717178,213.200897"
+              class="id_communism id_Anarchy101" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -216.988617,117.662010 L -125.661903,99.586617"
+              class="id_communism id_alltheleft" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -216.988617,117.662010 L -152.519180,15.240602"
+              class="id_communism id_SocialDemocracy" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -216.988617,117.662010 L -173.738602,131.833008"
+              class="id_communism id_DebateCommunism" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -219.148300,154.146820 L -218.717178,213.200897"
+              class="id_LibertarianSocialism id_Anarchy101" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -219.148300,154.146820 L -125.661903,99.586617"
+              class="id_LibertarianSocialism id_alltheleft" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -219.148300,154.146820 L -173.738602,131.833008"
+              class="id_LibertarianSocialism id_DebateCommunism"
+              stroke-opacity="1.0" stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 117.116112,65.891869 L 178.205215,78.353714"
+              class="id_Bad_Cop_No_Donut id_Cascadia" stroke-opacity="1.0"
+              stroke="#a4a614"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 117.116112,65.891869 L 75.518379,-1.875850"
+              class="id_Bad_Cop_No_Donut id_libertarianmeme"
+              stroke-opacity="1.0" stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 117.116112,65.891869 L 35.973385,53.319557"
+              class="id_Bad_Cop_No_Donut id_evolutionReddit"
+              stroke-opacity="1.0" stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 117.116112,65.891869 L 45.319611,129.195190"
+              class="id_Bad_Cop_No_Donut id_DescentIntoTyranny"
+              stroke-opacity="1.0" stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 117.116112,65.891869 L 93.167702,86.340820"
+              class="id_Bad_Cop_No_Donut id_restorethefourth"
+              stroke-opacity="1.0" stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 254.597794,-51.092728 L 146.974030,-40.632179"
+              class="id_centrist id_moderatepolitics" stroke-opacity="1.0"
+              stroke="#ea8615"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 107.557007,143.100266 L 45.319611,129.195190"
+              class="id_greed id_DescentIntoTyranny" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 45.926830,-145.380615 L -68.924774,-3.367261"
+              class="id_republicans id_EndlessWar" stroke-opacity="1.0"
+              stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 45.926830,-145.380615 L 146.974030,-40.632179"
+              class="id_republicans id_moderatepolitics" stroke-opacity="1.0"
+              stroke="#75a88a"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 45.926830,-145.380615 L 137.165009,-76.477760"
+              class="id_republicans id_Ask_Politics" stroke-opacity="1.0"
+              stroke="#75a88a"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 45.926830,-145.380615 L 75.518379,-1.875850"
+              class="id_republicans id_libertarianmeme" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 45.926830,-145.380615 L 10.353386,-192.881836"
+              class="id_republicans id_Marco_Rubio" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 45.926830,-145.380615 L 3.537597,-105.406769"
+              class="id_republicans id_2016_elections" stroke-opacity="1.0"
+              stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 45.926830,-145.380615 L -61.362236,-117.936546"
+              class="id_republicans id_KasichForPresident" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 45.926830,-145.380615 L 81.513161,-230.534836"
+              class="id_republicans id_The_Donald" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 45.926830,-145.380615 L 71.319130,-269.669739"
+              class="id_republicans id_AskTrumpSupporters" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -158.479065,200.809967 L -218.717178,213.200897"
+              class="id_LibertarianLeft id_Anarchy101" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -158.479065,200.809967 L -125.661903,99.586617"
+              class="id_LibertarianLeft id_alltheleft" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -158.479065,200.809967 L -137.975052,226.773575"
+              class="id_LibertarianLeft id_Green_Anarchism" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -12.615075,7.852549 L -68.924774,-3.367261"
+              class="id_POLITIC id_EndlessWar" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -12.615075,7.852549 L 146.974030,-40.632179"
+              class="id_POLITIC id_moderatepolitics" stroke-opacity="1.0"
+              stroke="#a4a614"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -12.615075,7.852549 L -125.661903,99.586617"
+              class="id_POLITIC id_alltheleft" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -12.615075,7.852549 L -152.519180,15.240602"
+              class="id_POLITIC id_SocialDemocracy" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -12.615075,7.852549 L 26.310434,98.930145"
+              class="id_POLITIC id_AnythingGoesNews" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -12.615075,7.852549 L 35.973385,53.319557"
+              class="id_POLITIC id_evolutionReddit" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -12.615075,7.852549 L 93.167702,86.340820"
+              class="id_POLITIC id_restorethefourth" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -12.615075,7.852549 L 3.537597,-105.406769"
+              class="id_POLITIC id_2016_elections" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -239.069000,-316.809784 L -221.801544,-303.119080"
+              class="id_new_right id_paleoconservative" stroke-opacity="1.0"
+              stroke="#2e9072"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -144.466507,172.508362 L -137.975052,226.773575"
+              class="id_IWW id_Green_Anarchism" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -115.292603,271.825714 L -218.717178,213.200897"
+              class="id_HackBloc id_Anarchy101" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 186.018127,-18.804018 L 130.895035,-132.735382"
+              class="id_GaryJohnson id_PoliticalDiscussion" stroke-opacity="1.0"
+              stroke="#75a88a"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 186.018127,-18.804018 L 75.518379,-1.875850"
+              class="id_GaryJohnson id_libertarianmeme" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 186.018127,-18.804018 L 224.681198,22.954981"
+              class="id_GaryJohnson id_LibertarianDebates" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 186.018127,-18.804018 L 93.167702,86.340820"
+              class="id_GaryJohnson id_restorethefourth" stroke-opacity="1.0"
+              stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 186.018127,-18.804018 L 3.537597,-105.406769"
+              class="id_GaryJohnson id_2016_elections" stroke-opacity="1.0"
+              stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 178.205215,78.353714 L 146.974030,-40.632179"
+              class="id_Cascadia id_moderatepolitics" stroke-opacity="1.0"
+              stroke="#ea8615"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -68.924774,-3.367261 L -125.661903,99.586617"
+              class="id_EndlessWar id_alltheleft" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -68.924774,-3.367261 L -152.519180,15.240602"
+              class="id_EndlessWar id_SocialDemocracy" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -68.924774,-3.367261 L 26.310434,98.930145"
+              class="id_EndlessWar id_AnythingGoesNews" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -68.924774,-3.367261 L 75.518379,-1.875850"
+              class="id_EndlessWar id_libertarianmeme" stroke-opacity="1.0"
+              stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -68.924774,-3.367261 L 35.973385,53.319557"
+              class="id_EndlessWar id_evolutionReddit" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -68.924774,-3.367261 L 45.319611,129.195190"
+              class="id_EndlessWar id_DescentIntoTyranny" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -68.924774,-3.367261 L 93.167702,86.340820"
+              class="id_EndlessWar id_restorethefourth" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -68.924774,-3.367261 L 3.537597,-105.406769"
+              class="id_EndlessWar id_2016_elections" stroke-opacity="1.0"
+              stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -68.924774,-3.367261 L -61.362236,-117.936546"
+              class="id_EndlessWar id_KasichForPresident" stroke-opacity="1.0"
+              stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 146.974030,-40.632179 L 130.895035,-132.735382"
+              class="id_moderatepolitics id_PoliticalDiscussion"
+              stroke-opacity="1.0" stroke="#ea8615"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 146.974030,-40.632179 L 137.165009,-76.477760"
+              class="id_moderatepolitics id_Ask_Politics" stroke-opacity="1.0"
+              stroke="#ea8615"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 146.974030,-40.632179 L 26.310434,98.930145"
+              class="id_moderatepolitics id_AnythingGoesNews"
+              stroke-opacity="1.0" stroke="#a4a614"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 146.974030,-40.632179 L 35.973385,53.319557"
+              class="id_moderatepolitics id_evolutionReddit"
+              stroke-opacity="1.0" stroke="#a4a614"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 146.974030,-40.632179 L 178.958099,-148.138138"
+              class="id_moderatepolitics id_NeutralPolitics"
+              stroke-opacity="1.0" stroke="#ea8615"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 240.215607,-115.439453 L 137.165009,-76.477760"
+              class="id_TruePolitics id_Ask_Politics" stroke-opacity="1.0"
+              stroke="#ea8615"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -219.641815,40.384209 L -125.661903,99.586617"
+              class="id_demsocialist id_alltheleft" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -219.641815,40.384209 L -152.519180,15.240602"
+              class="id_demsocialist id_SocialDemocracy" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -218.717178,213.200897 L -125.661903,99.586617"
+              class="id_Anarchy101 id_alltheleft" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -218.717178,213.200897 L -137.975052,226.773575"
+              class="id_Anarchy101 id_Green_Anarchism" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -218.717178,213.200897 L -173.738602,131.833008"
+              class="id_Anarchy101 id_DebateCommunism" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 130.895035,-132.735382 L 137.165009,-76.477760"
+              class="id_PoliticalDiscussion id_Ask_Politics"
+              stroke-opacity="1.0" stroke="#ea8615"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 130.895035,-132.735382 L 178.958099,-148.138138"
+              class="id_PoliticalDiscussion id_NeutralPolitics"
+              stroke-opacity="1.0" stroke="#ea8615"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 130.895035,-132.735382 L -8.200832,-161.977982"
+              class="id_PoliticalDiscussion id_SandersForPresident"
+              stroke-opacity="1.0" stroke="#75a88a"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 130.895035,-132.735382 L 81.513161,-230.534836"
+              class="id_PoliticalDiscussion id_The_Donald" stroke-opacity="1.0"
+              stroke="#75a88a"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -125.661903,99.586617 L -152.519180,15.240602"
+              class="id_alltheleft id_SocialDemocracy" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -125.661903,99.586617 L 26.310434,98.930145"
+              class="id_alltheleft id_AnythingGoesNews" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -125.661903,99.586617 L 35.973385,53.319557"
+              class="id_alltheleft id_evolutionReddit" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -125.661903,99.586617 L -173.738602,131.833008"
+              class="id_alltheleft id_DebateCommunism" stroke-opacity="1.0"
+              stroke="#c686e9"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -152.519180,15.240602 L -70.787224,-149.068085"
+              class="id_SocialDemocracy id_MartinOMalley" stroke-opacity="1.0"
+              stroke="#63a8f4"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -152.519180,15.240602 L 3.537597,-105.406769"
+              class="id_SocialDemocracy id_2016_elections" stroke-opacity="1.0"
+              stroke="#92a67e"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 137.165009,-76.477760 L 178.958099,-148.138138"
+              class="id_Ask_Politics id_NeutralPolitics" stroke-opacity="1.0"
+              stroke="#ea8615"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 137.165009,-76.477760 L 45.319611,129.195190"
+              class="id_Ask_Politics id_DescentIntoTyranny" stroke-opacity="1.0"
+              stroke="#a4a614"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 137.165009,-76.477760 L 93.167702,86.340820"
+              class="id_Ask_Politics id_restorethefourth" stroke-opacity="1.0"
+              stroke="#a4a614"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 137.165009,-76.477760 L 3.537597,-105.406769"
+              class="id_Ask_Politics id_2016_elections" stroke-opacity="1.0"
+              stroke="#a4a614"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 26.310434,98.930145 L 75.518379,-1.875850"
+              class="id_AnythingGoesNews id_libertarianmeme"
+              stroke-opacity="1.0" stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 26.310434,98.930145 L 35.973385,53.319557"
+              class="id_AnythingGoesNews id_evolutionReddit"
+              stroke-opacity="1.0" stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 26.310434,98.930145 L 45.319611,129.195190"
+              class="id_AnythingGoesNews id_DescentIntoTyranny"
+              stroke-opacity="1.0" stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 26.310434,98.930145 L 93.167702,86.340820"
+              class="id_AnythingGoesNews id_restorethefourth"
+              stroke-opacity="1.0" stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 75.518379,-1.875850 L 224.681198,22.954981"
+              class="id_libertarianmeme id_LibertarianDebates"
+              stroke-opacity="1.0" stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 75.518379,-1.875850 L 45.319611,129.195190"
+              class="id_libertarianmeme id_DescentIntoTyranny"
+              stroke-opacity="1.0" stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 75.518379,-1.875850 L 105.327560,-195.025772"
+              class="id_libertarianmeme id_TedCruz" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 75.518379,-1.875850 L -61.362236,-117.936546"
+              class="id_libertarianmeme id_KasichForPresident"
+              stroke-opacity="1.0" stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 35.973385,53.319557 L 45.319611,129.195190"
+              class="id_evolutionReddit id_DescentIntoTyranny"
+              stroke-opacity="1.0" stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 35.973385,53.319557 L 10.353386,-192.881836"
+              class="id_evolutionReddit id_Marco_Rubio" stroke-opacity="1.0"
+              stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 35.973385,53.319557 L 93.167702,86.340820"
+              class="id_evolutionReddit id_restorethefourth"
+              stroke-opacity="1.0" stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 178.958099,-148.138138 L 81.513161,-230.534836"
+              class="id_NeutralPolitics id_The_Donald" stroke-opacity="1.0"
+              stroke="#75a88a"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 45.319611,129.195190 L 93.167702,86.340820"
+              class="id_DescentIntoTyranny id_restorethefourth"
+              stroke-opacity="1.0" stroke="#5fc613"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 10.353386,-192.881836 L 105.327560,-195.025772"
+              class="id_Marco_Rubio id_TedCruz" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 10.353386,-192.881836 L -70.787224,-149.068085"
+              class="id_Marco_Rubio id_MartinOMalley" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 10.353386,-192.881836 L 3.537597,-105.406769"
+              class="id_Marco_Rubio id_2016_elections" stroke-opacity="1.0"
+              stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 10.353386,-192.881836 L -61.362236,-117.936546"
+              class="id_Marco_Rubio id_KasichForPresident" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 10.353386,-192.881836 L 81.513161,-230.534836"
+              class="id_Marco_Rubio id_The_Donald" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -70.787224,-149.068085 L -8.200832,-161.977982"
+              class="id_MartinOMalley id_SandersForPresident"
+              stroke-opacity="1.0" stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -70.787224,-149.068085 L 3.537597,-105.406769"
+              class="id_MartinOMalley id_2016_elections" stroke-opacity="1.0"
+              stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -8.200832,-161.977982 L -61.362236,-117.936546"
+              class="id_SandersForPresident id_KasichForPresident"
+              stroke-opacity="1.0" stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -8.200832,-161.977982 L 81.513161,-230.534836"
+              class="id_SandersForPresident id_The_Donald" stroke-opacity="1.0"
+              stroke="#00caff"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 3.537597,-105.406769 L -61.362236,-117.936546"
+              class="id_2016_elections id_KasichForPresident"
+              stroke-opacity="1.0" stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 3.537597,-105.406769 L 81.513161,-230.534836"
+              class="id_2016_elections id_The_Donald" stroke-opacity="1.0"
+              stroke="#2fc889"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 81.513161,-230.534836 L 71.319130,-269.669739"
+              class="id_The_Donald id_AskTrumpSupporters" stroke-opacity="1.0"
+              stroke="#00caff"/>
+    </g>
+    <g id="nodes">
+        <circle fill-opacity="1.0" fill="#5fc613" r="10.0" cx="17.751936"
+                class="id_obama" cy="-61.249405" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#5fc613" r="10.0" cx="-58.455017"
+                class="id_Green" cy="114.33255" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#5fc613" r="10.0" cx="-22.162909"
+                class="id_AmericanPolitics" cy="-37.591457" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#c686e9" r="10.0" cx="-30.158867"
+                class="id_progressive" cy="40.909916" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#5fc613" r="10.0" cx="79.363686"
+                class="id_PoliticalHumor" cy="-26.121511" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#5fc613" r="10.0" cx="23.63937"
+                class="id_democrats" cy="-14.965897" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#5fc613" r="10.0" cx="117.11611"
+                class="id_Bad_Cop_No_Donut" cy="65.89187" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#00caff" r="10.0" cx="45.92683"
+                class="id_republicans" cy="-145.38062" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#5fc613" r="10.0" cx="-12.615075"
+                class="id_POLITIC" cy="7.852549" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#5fc613" r="10.0" cx="-68.924774"
+                class="id_EndlessWar" cy="-3.3672607" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#ea8615" r="10.0" cx="130.89503"
+                class="id_PoliticalDiscussion" cy="-132.73538" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#5fc613" r="10.0" cx="3.5375974"
+                class="id_2016_elections" cy="-105.40677" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#00caff" r="10.0" cx="147.33429"
+                class="id_ronpaul" cy="10.618342" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#00caff" r="10.0" cx="186.01813"
+                class="id_GaryJohnson" cy="-18.804018" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#ea8615" r="10.0" cx="146.97403"
+                class="id_moderatepolitics" cy="-40.63218" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#5fc613" r="10.0" cx="26.310434"
+                class="id_AnythingGoesNews" cy="98.930145" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#00caff" r="10.0" cx="75.51838"
+                class="id_libertarianmeme" cy="-1.87585" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#00caff" r="10.0" cx="224.6812"
+                class="id_LibertarianDebates" cy="22.95498" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#ea8615" r="10.0" cx="145.54791"
+                class="id_Economics" cy="-113.18176" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#00caff" r="10.0" cx="149.42212"
+                class="id_Conservative" cy="-210.38422" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#ea8615" r="10.0" cx="137.16501"
+                class="id_Ask_Politics" cy="-76.47776" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#ea8615" r="10.0" cx="178.9581"
+                class="id_NeutralPolitics" cy="-148.13814" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#c686e9" r="10.0" cx="-173.7386"
+                class="id_DebateCommunism" cy="131.83301" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#c686e9" r="10.0" cx="-109.902954"
+                class="id_Anarchism" cy="189.55437" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#5fc613" r="10.0" cx="7.392887"
+                class="id_privacy" cy="202.35823" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#c686e9" r="10.0" cx="-169.24617"
+                class="id_socialism" cy="83.827034" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#c686e9" r="10.0" cx="-190.93396"
+                class="id_Agorism" cy="363.37427" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#c686e9" r="10.0" cx="-216.98862"
+                class="id_communism" cy="117.66201" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#c686e9" r="10.0" cx="-158.47906"
+                class="id_LibertarianLeft" cy="200.80997" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#c686e9" r="10.0" cx="-144.4665"
+                class="id_IWW" cy="172.50836" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#c686e9" r="10.0" cx="-115.2926"
+                class="id_HackBloc" cy="271.8257" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#c686e9" r="10.0" cx="-218.71718"
+                class="id_Anarchy101" cy="213.2009" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#c686e9" r="10.0" cx="-125.6619"
+                class="id_alltheleft" cy="99.58662" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#c686e9" r="10.0" cx="-152.51918"
+                class="id_SocialDemocracy" cy="15.2406025" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#c686e9" r="10.0" cx="-137.97505"
+                class="id_Green_Anarchism" cy="226.77357" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#5fc613" r="10.0" cx="45.31961"
+                class="id_DescentIntoTyranny" cy="129.19519" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#00caff" r="10.0" cx="199.60396"
+                class="id_MensRights" cy="-285.70267" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#00caff" r="10.0" cx="105.32756"
+                class="id_TedCruz" cy="-195.02577" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#00caff" r="10.0" cx="81.51316"
+                class="id_The_Donald" cy="-230.53484" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#c686e9" r="10.0" cx="-219.1483"
+                class="id_LibertarianSocialism" cy="154.14682" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#5fc613" r="10.0" cx="35.973385"
+                class="id_evolutionReddit" cy="53.319557" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#5fc613" r="10.0" cx="93.1677"
+                class="id_restorethefourth" cy="86.34082" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#00caff" r="10.0" cx="-61.362236"
+                class="id_KasichForPresident" cy="-117.93655" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#ea8615" r="10.0" cx="178.20522"
+                class="id_Cascadia" cy="78.353714" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#00caff" r="10.0" cx="-8.200832"
+                class="id_SandersForPresident" cy="-161.97798" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#5fc613" r="10.0" cx="107.55701"
+                class="id_greed" cy="143.10027" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#00caff" r="10.0" cx="-70.787224"
+                class="id_MartinOMalley" cy="-149.06808" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#c686e9" r="10.0" cx="-219.0802"
+                class="id_voluntarism" cy="424.90738" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#ff5c81" r="10.0" cx="-246.82967"
+                class="id_censorship" cy="-102.418976" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#ff5c81" r="10.0" cx="-312.99677"
+                class="id_PoliticalModeration" cy="-138.64378" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#ea8615" r="10.0" cx="254.5978"
+                class="id_centrist" cy="-51.092728" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#00caff" r="10.0" cx="10.353386"
+                class="id_Marco_Rubio" cy="-192.88184" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#00caff" r="10.0" cx="71.31913"
+                class="id_AskTrumpSupporters" cy="-269.66974" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#2e9072" r="10.0" cx="-239.069"
+                class="id_new_right" cy="-316.80978" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#2e9072" r="10.0" cx="-221.80154"
+                class="id_paleoconservative" cy="-303.11908" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#ea8615" r="10.0" cx="240.2156"
+                class="id_TruePolitics" cy="-115.43945" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#c686e9" r="10.0" cx="-219.64182"
+                class="id_demsocialist" cy="40.38421" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+    </g>
+    <g id="node-labels">
+        <text font-size="12" x="17.751936" y="-59.066788" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_obama">
+            obama
+        </text>
+        <text font-size="12" x="-58.455017" y="116.55325" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_Green">
+            Green
+        </text>
+        <text font-size="12" x="-22.162909" y="-35.40884" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_AmericanPolitics">
+            AmericanPolitics
+        </text>
+        <text font-size="12" x="-30.158867" y="43.688725" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_progressive">
+            progressive
+        </text>
+        <text font-size="12" x="79.363686" y="-23.938894" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_PoliticalHumor">
+            PoliticalHumor
+        </text>
+        <text font-size="12" x="23.63937" y="-12.783279" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_democrats">
+            democrats
+        </text>
+        <text font-size="12" x="117.11611" y="68.67214" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_Bad_Cop_No_Donut">
+            Bad_Cop_No_Donut
+        </text>
+        <text font-size="12" x="45.92683" y="-142.63696" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_republicans">
+            republicans
+        </text>
+        <text font-size="12" x="-12.615075" y="10.074717" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_POLITIC">
+            POLITIC
+        </text>
+        <text font-size="12" x="-68.924774" y="-1.1846435" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_EndlessWar">
+            EndlessWar
+        </text>
+        <text font-size="12" x="130.89503" y="-130.55276" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_PoliticalDiscussion">
+            PoliticalDiscussion
+        </text>
+        <text font-size="12" x="3.5375974" y="-102.65433" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_2016_elections">
+            2016_elections
+        </text>
+        <text font-size="12" x="147.33429" y="13.361995" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_ronpaul">
+            ronpaul
+        </text>
+        <text font-size="12" x="186.01813" y="-15.988588" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_GaryJohnson">
+            GaryJohnson
+        </text>
+        <text font-size="12" x="146.97403" y="-37.888527" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_moderatepolitics">
+            moderatepolitics
+        </text>
+        <text font-size="12" x="26.310434" y="101.745575" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_AnythingGoesNews">
+            AnythingGoesNews
+        </text>
+        <text font-size="12" x="75.51838" y="0.30676723" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_libertarianmeme">
+            libertarianmeme
+        </text>
+        <text font-size="12" x="224.6812" y="25.137598" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_LibertarianDebates">
+            LibertarianDebates
+        </text>
+        <text font-size="12" x="145.54791" y="-110.999146" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_Economics">
+            Economics
+        </text>
+        <text font-size="12" x="149.42212" y="-208.16351" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_Conservative">
+            Conservative
+        </text>
+        <text font-size="12" x="137.16501" y="-73.73411" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_Ask_Politics">
+            Ask_Politics
+        </text>
+        <text font-size="12" x="178.9581" y="-145.95552" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_NeutralPolitics">
+            NeutralPolitics
+        </text>
+        <text font-size="12" x="-173.7386" y="134.05371" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_DebateCommunism">
+            DebateCommunism
+        </text>
+        <text font-size="12" x="-109.902954" y="191.73698" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_Anarchism">
+            Anarchism
+        </text>
+        <text font-size="12" x="7.392887" y="205.13704" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_privacy">
+            privacy
+        </text>
+        <text font-size="12" x="-169.24617" y="86.00965" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_socialism">
+            socialism
+        </text>
+        <text font-size="12" x="-190.93396" y="366.15308" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_Agorism">
+            Agorism
+        </text>
+        <text font-size="12" x="-216.98862" y="119.84463" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_communism">
+            communism
+        </text>
+        <text font-size="12" x="-158.47906" y="203.0292" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_LibertarianLeft">
+            LibertarianLeft
+        </text>
+        <text font-size="12" x="-144.4665" y="174.65582" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_IWW">
+            IWW
+        </text>
+        <text font-size="12" x="-115.2926" y="274.00833" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_HackBloc">
+            HackBloc
+        </text>
+        <text font-size="12" x="-218.71718" y="215.9885" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_Anarchy101">
+            Anarchy101
+        </text>
+        <text font-size="12" x="-125.6619" y="101.805855" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_alltheleft">
+            alltheleft
+        </text>
+        <text font-size="12" x="-152.51918" y="18.056032" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_SocialDemocracy">
+            SocialDemocracy
+        </text>
+        <text font-size="12" x="-137.97505" y="229.55385" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_Green_Anarchism">
+            Green_Anarchism
+        </text>
+        <text font-size="12" x="45.31961" y="131.974" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_DescentIntoTyranny">
+            DescentIntoTyranny
+        </text>
+        <text font-size="12" x="199.60396" y="-282.92386" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_MensRights">
+            MensRights
+        </text>
+        <text font-size="12" x="105.32756" y="-192.80507" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_TedCruz">
+            TedCruz
+        </text>
+        <text font-size="12" x="81.51316" y="-227.79118" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_The_Donald">
+            The_Donald
+        </text>
+        <text font-size="12" x="-219.1483" y="156.36752" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_LibertarianSocialism">
+            LibertarianSocialism
+        </text>
+        <text font-size="12" x="35.973385" y="55.502174" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_evolutionReddit">
+            evolutionReddit
+        </text>
+        <text font-size="12" x="93.1677" y="88.56006" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_restorethefourth">
+            restorethefourth
+        </text>
+        <text font-size="12" x="-61.362236" y="-115.75393" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_KasichForPresident">
+            KasichForPresident
+        </text>
+        <text font-size="12" x="178.20522" y="80.57442" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_Cascadia">
+            Cascadia
+        </text>
+        <text font-size="12" x="-8.200832" y="-159.75728" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_SandersForPresident">
+            SandersForPresident
+        </text>
+        <text font-size="12" x="107.55701" y="145.87907" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_greed">
+            greed
+        </text>
+        <text font-size="12" x="-70.787224" y="-146.25119" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_MartinOMalley">
+            MartinOMalley
+        </text>
+        <text font-size="12" x="-219.0802" y="427.09" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_voluntarism">
+            voluntarism
+        </text>
+        <text font-size="12" x="-246.82967" y="-99.67532" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_censorship">
+            censorship
+        </text>
+        <text font-size="12" x="-312.99677" y="-136.46117" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_PoliticalModeration">
+            PoliticalModeration
+        </text>
+        <text font-size="12" x="254.5978" y="-48.91011" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_centrist">
+            centrist
+        </text>
+        <text font-size="12" x="10.353386" y="-190.13818" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_Marco_Rubio">
+            Marco_Rubio
+        </text>
+        <text font-size="12" x="71.31913" y="-266.88947" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_AskTrumpSupporters">
+            AskTrumpSupporters
+        </text>
+        <text font-size="12" x="-239.069" y="-314.03098" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_new_right">
+            new_right
+        </text>
+        <text font-size="12" x="-221.80154" y="-300.37543" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_paleoconservative">
+            paleoconservative
+        </text>
+        <text font-size="12" x="240.2156" y="-113.256836" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_TruePolitics">
+            TruePolitics
+        </text>
+        <text font-size="12" x="-219.64182" y="42.566826" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="id_demsocialist">
+            demsocialist
+        </text>
+    </g>
+</svg>

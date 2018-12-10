@@ -46,17 +46,17 @@ bipartite_graph_file = 'graphs/bipartite_graph.graph'
 
 # variables in data pre processing
 raw_data_location = '/data/'
-year = '2017'
+year = '2016'
 comments_cap = 1000
 posts_cap = 1000
 
 # variables in graph folding
-connect_via_post = True
+connect_via_post = False
 post_connection_threshold = 1 # haven't tried changing this yet
-connect_via_comment = False
+connect_via_comment = True
 comment_connection_threshold = 1 # haven't tried changing this yet
 
-fold_connection_threshold = 3
+fold_connection_threshold = 5
 should_deconvolve = False
 just_trolls = False # if this is true, make remove trolls false
 remove_trolls = True

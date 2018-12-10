@@ -125,6 +125,8 @@ def get_metrics(partition):
 	sub_to_detected_communities = {}
 	for key in partition:
 		sub_to_detected_communities[labels[key]] = partition[key]
+	print sub_to_detected_communities
+
 
 	sub_to_ground_truth = {}
 	for sub in subreddit_to_category:
